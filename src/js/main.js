@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Proof Images Lightbox Viewer
-  const proofImgs = document.querySelectorAll('.proof-thumbnails img');
+  // Proof Images & Architectural Plans Lightbox Viewer
+  const proofImgs = document.querySelectorAll('.proof-thumbnails img, .plan-card img');
   const lightbox = document.getElementById('lightbox-modal');
   const lightboxImg = document.getElementById('lightbox-img');
 
