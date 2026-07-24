@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "donate-vrishabanath-bhagwan",
+  "name": "othalavadi-jain-temple",
   "compatibility_date": "2026-07-24",
   "assets": {
     "directory": "./dist"
