@@ -10,10 +10,28 @@ export const en = {
   select_amount_label: "Choose Donation Amount:",
   plaque_tier: "Stone Plaque Donor Tier",
   bank_details_heading: "Direct Bank Transfer Details",
+  acc_name_label: "Account Name:",
+  acc_no_label: "Account No:",
+  bank_name_label: "Bank Name:",
+  ifsc_label: "IFSC Code:",
+  btn_copy: "Copy",
+  
   notice_title: "Sacred Appeal Notice from Shravakas & Shravikas",
   proposal_title: "Technical Work Estimates & Yathi Nivas Plan",
   gallery_title: "Temple Photo Gallery",
   contact_title: "Trustee Contacts & Location",
+  
+  role_president: "President",
+  role_secretary: "Secretary",
+  role_treasurer: "Treasurer",
+  btn_call: "📞 Call",
+  
+  routes_heading: "Travel Routes & Nearby Distances",
+  routes_body: "• Arni: 18 km | • Chetpet: 19 km | • Vandavasi: 48 km | • Tiruvannamalai: 55 km | • Tindivanam: 71 km | • Villupuram: 85 km",
+  
+  location_heading: "Temple Location & Directions",
+  location_body: "1008 Sri Vrishabanath Bhagwan Jain Temple, Othalavadi Village, Chetpet Taluk, Tiruvannamalai District, Tamil Nadu – 632326 (GPS: 12.54798, 79.24764)",
+  btn_open_maps: "📍 Open Location in Google Maps",
   
   // Table Headers
   th_description: "Description of Work",

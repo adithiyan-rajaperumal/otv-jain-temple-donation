@@ -7,25 +7,27 @@ export function initGallery() {
   if (!container) return;
 
   const images = [
-    { src: '/assets/images/temple/IMG-20260722-WA0047.jpg', title: 'Moolavar Bhagwan Sri Adinathar (Aniyadha Azhagar)' },
-    { src: '/assets/images/temple/IMG-20260722-WA0036.jpg', title: 'Sri Padmavati Mata Shrine' },
-    { src: '/assets/images/temple/IMG-20260722-WA0035.jpg', title: 'Main Jinalayam Mukhamandapam & Gopuram Side View' },
-    { src: '/assets/images/temple/IMG-20260722-WA0026.jpg', title: 'Granitic Manastambha (Pillar of Honor)' },
-    { src: '/assets/images/temple/IMG-20260722-WA0040.jpg', title: 'Temple Entrance Gateway & Archway' },
-    { src: '/assets/images/temple/IMG-20260722-WA0041.jpg', title: 'Gateway View towards Manastambha' },
-    { src: '/assets/images/temple/IMG-20260722-WA0044.jpg', title: 'Moolavar Gopuram & Vimana Tower' },
-    { src: '/assets/images/temple/IMG-20260722-WA0045.jpg', title: 'Gopuram Vrishabha (Bull) Sculpture' },
-    { src: '/assets/images/temple/IMG-20260722-WA0038.jpg', title: 'Manastambha Base & Pillared Mukhamandapam' },
-    { src: '/assets/images/temple/IMG-20260722-WA0039.jpg', title: 'Proposed Yathi Nivas Construction Ground' },
-    { src: '/assets/images/temple/IMG-20260722-WA0033.jpg', title: 'Prakaram Pathway & Loudspeaker Tower' },
-    { src: '/assets/images/temple/IMG-20260722-WA0031.jpg', title: 'Outer Prakaram Inscription Wall' },
-    { src: '/assets/images/temple/IMG-20260722-WA0042.jpg', title: 'Temple Precincts & Surrounding Wall' },
-    { src: '/assets/images/temple/IMG-20260722-WA0043.jpg', title: 'Paved Stone Flooring Precincts' },
-    { src: '/assets/images/temple/IMG-20260722-WA0020.jpg', title: 'White Vimana Tower Close-up' },
-    { src: '/assets/images/temple/IMG-20260722-WA0018.jpg', title: 'Temple Gopuram & Cloudscape' },
-    { src: '/assets/images/temple/IMG-20260722-WA0024.jpg', title: 'Front Pillared Corridor' },
-    { src: '/assets/images/temple/IMG-20260722-WA0029.jpg', title: 'Entrance Arch Front View' },
-    { src: '/assets/images/temple/IMG-20260722-WA0034.jpg', title: 'Temple Sanctum External Wall' }
+    { src: '/assets/images/temple/god.jpg', title: 'Moolavar Bhagwan Sri Adinathar (Aniyadha Azhagar)' },
+    { src: '/assets/images/temple/Brammadeva_temple.jpg', title: 'Sri Brahmadeva Temple Shrine' },
+    { src: '/assets/images/temple/padmavathi_temple.jpg', title: 'Sri Padmavati Mata Temple Shrine' },
+    { src: '/assets/images/temple/front_view_with_manasthambam.jpg', title: 'Temple Front View with Manastambha' },
+    { src: '/assets/images/temple/main_temple_gopuram.jpg', title: 'Main Temple Gopuram & Vimana Tower' },
+    { src: '/assets/images/temple/temple_entrance.jpg', title: 'Main Temple Entrance Gate' },
+    { src: '/assets/images/temple/temple_entrance (2).jpg', title: 'Main Temple Entrance Gateway Arch' },
+    { src: '/assets/images/temple/temple_entrance_inner_view.jpg', title: 'Temple Entrance Gate Inner View' },
+    { src: '/assets/images/temple/temple_entrance_long_view.jpg', title: 'Temple Entrance Long View' },
+    { src: '/assets/images/temple/main_temple_left_side_gopuram_view.jpg', title: 'Main Temple Left Side Gopuram View' },
+    { src: '/assets/images/temple/main_temple_left_side_view_gopuram.jpg', title: 'Main Temple Left Side Elevation' },
+    { src: '/assets/images/temple/main_temple_right_side.jpg', title: 'Main Temple Right Side View' },
+    { src: '/assets/images/temple/main_temple_from_right_side_view.jpg', title: 'Main Temple View from Right' },
+    { src: '/assets/images/temple/main_temple_elevated.jpg', title: 'Main Temple Elevated View' },
+    { src: '/assets/images/temple/main_temple_front_view_from_left.jpg', title: 'Main Temple Front View (Left)' },
+    { src: '/assets/images/temple/main_temple_front_from_left.jpg', title: 'Main Temple Front Corridor' },
+    { src: '/assets/images/temple/main_temple_back_view_from_left.jpg', title: 'Main Temple Rear View' },
+    { src: '/assets/images/temple/main_temple_back_view_from_left2.jpg', title: 'Main Temple Rear Side View' },
+    { src: '/assets/images/temple/walkway_inside_temple.jpg', title: 'Paved Walkway Inside Temple' },
+    { src: '/assets/images/temple/proposed_plan_land_adjacent_to_temple.jpg', title: 'Proposed Yathi Nivas Construction Site Land' },
+    { src: '/assets/images/temple/temple_view_from_proposed_building_site.jpg', title: 'Temple View from Proposed Yathi Nivas Site' }
   ];
 
   let html = '';
