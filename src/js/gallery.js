@@ -7,27 +7,25 @@ export function initGallery() {
   if (!container) return;
 
   const images = [
-    { src: '/assets/images/temple/IMG-20260722-WA0018.jpg', title: 'Sri Vrishabanath Bhagwan Moolavar (Aniyadha Azhagar)' },
-    { src: '/assets/images/temple/IMG-20260722-WA0020.jpg', title: 'Moolavar Gopuram & Vimana Tower' },
-    { src: '/assets/images/temple/IMG-20260722-WA0024.jpg', title: 'Front Mandapam & Pillars' },
-    { src: '/assets/images/temple/IMG-20260722-WA0026.jpg', title: 'Manastambha (Pillar of Honor)' },
-    { src: '/assets/images/temple/IMG-20260722-WA0029.jpg', title: 'Temple Entrance Gate & Arch' },
-    { src: '/assets/images/temple/IMG-20260722-WA0031.jpg', title: 'Prakaram & Outer Pathway' },
-    { src: '/assets/images/temple/IMG-20260722-WA0033.jpg', title: 'Inscriptions & Chola Heritage Walls' },
-    { src: '/assets/images/temple/IMG-20260722-WA0034.jpg', title: 'Temple Premises & Courtyard' },
-    { src: '/assets/images/temple/IMG-20260722-WA0035.jpg', title: 'Front View of Jinalayam' },
-    { src: '/assets/images/temple/IMG-20260722-WA0036.jpg', title: 'Sanctum & Garbhagriha Entrance' },
-    { src: '/assets/images/temple/IMG-20260722-WA0037.jpg', title: 'Tyagi Niwas Proposed Construction Site' },
-    { src: '/assets/images/temple/IMG-20260722-WA0038.jpg', title: 'Around Garbhagriha Wall' },
-    { src: '/assets/images/temple/IMG-20260722-WA0039.jpg', title: 'Temple Complex Ground View' },
-    { src: '/assets/images/temple/IMG-20260722-WA0040.jpg', title: 'Rear View of Temple' },
-    { src: '/assets/images/temple/IMG-20260722-WA0041.jpg', title: 'Side Elevation View' },
-    { src: '/assets/images/temple/IMG-20260722-WA0042.jpg', title: 'Temple Boundary Pathway' },
-    { src: '/assets/images/temple/IMG-20260722-WA0043.jpg', title: 'Temple Open Grounds' },
-    { src: '/assets/images/temple/IMG-20260722-WA0044.jpg', title: 'Inner Mandapam Sculptures' },
-    { src: '/assets/images/temple/IMG-20260722-WA0045.jpg', title: 'Sri Brahmadeva Shrine Area' },
-    { src: '/assets/images/temple/IMG-20260722-WA0046.jpg', title: 'Borewell & Water Tank Site' },
-    { src: '/assets/images/temple/IMG-20260722-WA0047.jpg', title: 'Temple Compound Entrance' }
+    { src: '/assets/images/temple/IMG-20260722-WA0047.jpg', title: 'Moolavar Bhagwan Sri Adinathar (Aniyadha Azhagar)' },
+    { src: '/assets/images/temple/IMG-20260722-WA0036.jpg', title: 'Sri Padmavati Mata Shrine' },
+    { src: '/assets/images/temple/IMG-20260722-WA0035.jpg', title: 'Main Jinalayam Mukhamandapam & Gopuram Side View' },
+    { src: '/assets/images/temple/IMG-20260722-WA0026.jpg', title: 'Granitic Manastambha (Pillar of Honor)' },
+    { src: '/assets/images/temple/IMG-20260722-WA0040.jpg', title: 'Temple Entrance Gateway & Archway' },
+    { src: '/assets/images/temple/IMG-20260722-WA0041.jpg', title: 'Gateway View towards Manastambha' },
+    { src: '/assets/images/temple/IMG-20260722-WA0044.jpg', title: 'Moolavar Gopuram & Vimana Tower' },
+    { src: '/assets/images/temple/IMG-20260722-WA0045.jpg', title: 'Gopuram Vrishabha (Bull) Sculpture' },
+    { src: '/assets/images/temple/IMG-20260722-WA0038.jpg', title: 'Manastambha Base & Pillared Mukhamandapam' },
+    { src: '/assets/images/temple/IMG-20260722-WA0039.jpg', title: 'Proposed Yathi Nivas Construction Ground' },
+    { src: '/assets/images/temple/IMG-20260722-WA0033.jpg', title: 'Prakaram Pathway & Loudspeaker Tower' },
+    { src: '/assets/images/temple/IMG-20260722-WA0031.jpg', title: 'Outer Prakaram Inscription Wall' },
+    { src: '/assets/images/temple/IMG-20260722-WA0042.jpg', title: 'Temple Precincts & Surrounding Wall' },
+    { src: '/assets/images/temple/IMG-20260722-WA0043.jpg', title: 'Paved Stone Flooring Precincts' },
+    { src: '/assets/images/temple/IMG-20260722-WA0020.jpg', title: 'White Vimana Tower Close-up' },
+    { src: '/assets/images/temple/IMG-20260722-WA0018.jpg', title: 'Temple Gopuram & Cloudscape' },
+    { src: '/assets/images/temple/IMG-20260722-WA0024.jpg', title: 'Front Pillared Corridor' },
+    { src: '/assets/images/temple/IMG-20260722-WA0029.jpg', title: 'Entrance Arch Front View' },
+    { src: '/assets/images/temple/IMG-20260722-WA0034.jpg', title: 'Temple Sanctum External Wall' }
   ];
 
   let html = '';
