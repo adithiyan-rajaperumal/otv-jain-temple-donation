@@ -97,11 +97,12 @@ otv-jain-temple-donation/
 ### E. Responsive Photo Gallery
 - Grid view of all 21 temple images with touch gestures, swipe/click lightbox modal for full-screen view.
 
-### F. Trustee Contact Information
+### F. Trustee Contact Information & Location Map
 - **President**: D. Dharmapalan (+91 6369346503)
 - **Secretary**: N. Ponnappan (+91 9788391633)
 - **Treasurer**: P. Rajaperumal (+91 9524026692)
-- Bank Branch: Indian Bank, Devikapuram Branch (Code 02322)
+- **Bank Branch**: Indian Bank, Devikapuram Branch (Code 02322)
+- **Google Maps Location Link**: [https://share.google/9k4PHPMGBsX1xCUaL](https://share.google/9k4PHPMGBsX1xCUaL) (Includes "Get Directions" button & interactive embed/link card).
 
 ---
 
