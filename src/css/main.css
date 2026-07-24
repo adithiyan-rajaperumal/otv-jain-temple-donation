@@ -259,6 +259,44 @@ body {
   border-color: var(--primary-terracotta);
   color: var(--primary-terracotta);
 }
+.donation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+.btn-upi-pay {
+  background: linear-gradient(135deg, var(--primary-terracotta) 0%, #A32E18 100%);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(139, 38, 19, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+.btn-upi-pay:hover {
+  background: linear-gradient(135deg, #681B0C 0%, #8B2613 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(139, 38, 19, 0.45);
+}
+.btn-upi-subtext {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent-gold-bright);
+  letter-spacing: 0.3px;
+}
 .btn-block {
   width: 100%;
 }
