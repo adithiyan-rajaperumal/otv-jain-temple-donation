@@ -114,21 +114,53 @@ body {
 }
 
 @media (max-width: 640px) {
+  .navbar {
+    padding: 10px 12px;
+  }
   .nav-container, .header-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
   }
   .brand, .logo {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    width: 100%;
+  }
+  .logo-symbol-img {
+    height: 46px;
+    margin: 0 auto;
   }
   .brand-title, .site-title {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .brand-sub, .site-subtitle {
+    font-size: 0.76rem;
+    text-align: center;
   }
   .language-selector {
     width: 100%;
-    justify-content: center;
+    max-width: 380px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    margin: 2px auto 0 auto;
+  }
+  .lang-btn {
+    flex: 1;
+    text-align: center;
+    padding: 7px 4px;
+    font-size: 0.78rem;
+    border-radius: 18px;
   }
 }
 
