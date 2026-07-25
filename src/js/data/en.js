@@ -1,8 +1,8 @@
 export const en = {
   temple_title: "1008 Sri Virshabanath Jinalayam",
   temple_location: "Othalavadi, Tiruvannamalai Dist, Tamil Nadu",
-  hero_heading: "Sacred Renovation & Tyagi Niwas Construction Appeal",
-  hero_blessing: "Under the benign guidance of Bhattarak Chintamani Swasti Sri Dhavalakeerthi Swamiji (Mel Sithamur Jain Mutt) & Swasti Sri Lakshmisena Swamiji (Arihantagiri Jain Mutt)",
+  hero_heading: "Sacred Renovation, Tyagi Niwas Construction & Pancha Kalyana Pradhista Appeal",
+  hero_blessing: "Under the benign guidance of Swasti Sri Dhavalakeerthi Bhattaraka Swamiji (Arihantagiri Jain Mutt) & Swasti Sri Lakshmisena Bhattaraka Swamiji (Mel Sithamur Jain Mutt)",
   history_brief: "An ancient 10th-century Jain pilgrimage shrine historically known as 'Olaipadi' and patronized by Chola King Othalan, who praised Lord Adinathar as 'Aniyatha Azhagar'. Inscriptions confirm Pallichandam land gifts granted to this Jinalayam.",
   btn_donate_now: "⚡ Pay via Any UPI App",
   btn_view_proposal: "📋 View Renovation Estimate",
@@ -56,7 +56,7 @@ export const en = {
   // Notice body
   notice_body: `To all Shravakas, Shravikas, and Dharma-loving Devotees,
 
-Under the divine guidance of the pontiffs of the two great Mutts—Mel Sithamur Jain Mutt and Arihantagiri Jain Mutt (Bhattarak Chintamani Swasti Sri Dhavalakeerthi Bhattaraka Swamiji and Swasti Sri Lakshmisena Bhattaraka Swamiji)—the village public of Othalavadi along with all Shravakas and Shravikas have unanimously resolved to execute the complete renovation and restoration of 1008 Sri Virshabanath Jinalaya and construct a new Tyagi Niwas building.
+Under the divine guidance of Swasti Sri Dhavalakeerthi Bhattaraka Swamiji (Arihantagiri Jain Mutt) and Swasti Sri Lakshmisena Bhattaraka Swamiji (Mel Sithamur Jain Mutt), the village public of Othalavadi along with all Shravakas and Shravikas have unanimously resolved to execute the complete renovation and restoration of 1008 Sri Virshabanath Jinalaya, construct a new Tyagi Niwas building, and perform the Pancha Kalyana Pradhista Mahotsava following the renovation.
 
 The antiquity of the Othalavadi Jinalaya dates back prior to the 10th century AD. Inscriptions reveal that Chola King Othalan and Mallinatha Sambuvarayar kings granted 'Pallichandam' (tax-free land gifts) to this temple, extolling the main deity as "Swasti Sri Aniyadha Azhagar Jinalayam".
 
