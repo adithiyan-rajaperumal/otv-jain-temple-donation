@@ -37,5 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Default Language
-  setLanguage('en');
+  setLanguage('ta');
 });

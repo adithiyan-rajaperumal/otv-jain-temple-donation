@@ -4,7 +4,7 @@ import { hi } from './data/hi.js';
 import { kn } from './data/kn.js';
 
 const translations = { en, ta, hi, kn };
-let currentLang = 'en';
+let currentLang = 'ta';
 
 export function setLanguage(lang) {
   if (!translations[lang]) return;
