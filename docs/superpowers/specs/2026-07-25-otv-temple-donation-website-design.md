@@ -1,115 +1,79 @@
-# 1008 Sri Vrishabanath Bhagwan Temple Renovation & Donation Static Website Design
+# Design Specification: OTV Jain Temple Donation Website Updates
 
-## 1. Overview
-A mobile-first, ultra-fast static website created to facilitate renovation donations for the historic **1008 Sri Vrishabanath Bhagwan Jain Temple** located in Othalavadi Village, Chetpet Taluk, Tiruvannamalai District, Tamil Nadu.
-
-The site is designed for deployment on **Cloudflare Pages**, featuring dynamic instant multi-language switching (**English**, **Tamil**, **Hindi**, and **Kannada**), mobile native UPI payment launcher with preset amounts, bank transfer detail copying, interactive temple image gallery, multi-language notice proofs, and itemized renovation proposal details extracted from the technical estimate PDF with clean PDF proof export.
+**Date**: 2026-07-25  
+**Topic**: Panchakalyan Integration, Tamil Default Language, Mobile-First Layout & Bhattarak Order Correction
 
 ---
 
-## 2. User Review & Approvals
+## 1. Overview & Goals
 
-- **Language Support**: Instant dynamic switching between English, Tamil (தமிழ்), Hindi (हिंदी), and Kannada (ಕನ್ನಡ) without page reloads. Default language is English.
-- **UPI & Payment UX**: Interactive preset amount chips (₹1,008, ₹5,000, ₹11,000 Stone Plaque Tier, ₹25,000, ₹50,000, and custom amount). Tapping "Pay via UPI App" on mobile devices dynamically launches installed UPI apps (GPay, PhonePe, Paytm, BHIM) with recipient VPA (`f051m01588@indianbk`) and pre-filled amount. Also includes one-tap Copy UPI ID, Copy Bank Details, and full-screen QR code zoom modal.
-- **Renovation Proposal & Estimates**: Full itemized 11-work breakdown totaling ₹1,27,30,740 (~₹1.27 Crores), Yathi Nivas 3,000 sq.ft building architecture specs, and dual PDF options: downloading the original proposal PDF and exporting a clean, formatted web-to-pdf print proof document.
-- **Deployment Platform**: Cloudflare Pages (Vite + Vanilla HTML/CSS/JS build).
-
----
-
-## 3. Core Architecture & Asset Structure
-
-### Workspace Structure (`d:\otv_temple_donation\otv-jain-temple-donation`)
-```
-otv-jain-temple-donation/
-├── index.html                  # Main SPA HTML structure with SEO & WhatsApp OpenGraph tags
-├── package.json                # Project manifest & build scripts
-├── vite.config.js              # Vite static build configuration
-├── public/
-│   ├── favicon.ico
-│   └── assets/
-│       ├── images/
-│       │   ├── temple/         # 21 high-res photos copied from desktop asset folder
-│       │   ├── notices/        # Scanned proof & color notice images in all languages
-│       │   └── upi-qr.png      # UPI QR code image asset
-│       └── docs/
-│           └── proposal.pdf    # 1008_Sri_Vrishabanath_Temple_Merged_Updated.pdf
-└── src/
-    ├── css/
-    │   ├── main.css            # Temple theme (Terracotta #8B2613 & Gold #D4AF37), responsive grid
-    │   └── print.css           # Clean PDF proof printing stylesheet
-    └── js/
-        ├── data/
-        │   ├── en.js           # English strings & notice content
-        │   ├── ta.js           # Tamil strings & notice content
-        │   ├── hi.js           # Hindi strings & notice content
-        │   ├── kn.js           # Kannada strings & notice content
-        │   └── proposalData.js # 11-item estimate breakdown & Yathi Nivas specs
-        ├── i18n.js             # Language toggle & dynamic DOM text updater
-        ├── upi.js              # UPI link generator, preset selector, clipboard copy & toast notifications
-        ├── gallery.js          # Touch-friendly lightbox modal for temple photos
-        ├── proposal.js         # Interactive estimate table renderer & PDF proof print handler
-        └── main.js             # Application initialization
-```
+This design specification details updates to the 1008 Sri Vrishabanath Bhagwan Jain Temple donation website at Othalavadi. The key objectives are:
+1. **Panchakalyan (Pancha Kalyana Pradhista / பஞ்சகல்யாண பிரதிஷ்டை)**: Update the scope across hero titles, notices, meta tags, and proposal descriptions to reflect that Panchakalyan will take place following renovation.
+2. **Default Language**: Change default active language to Tamil (`ta`) as the primary target audience is Tamil-speaking.
+3. **Mobile-First Responsive Layout & Button Overhaul**: Eliminate right-side header overflow on mobile devices, fix text wrap and vertical alignment in buttons (especially for Tamil text), and ensure dynamic layout scalability.
+4. **Bhattarak Swamiji & Mutt Alignment (Option A)**:
+   - Pair **Swasti Sri Dhavalakeerthi Bhattaraka Swamiji** with **Arihantagiri Jain Mutt** (placed 1st in Bhattarak order).
+   - Pair **Swasti Sri Lakshmisena Bhattaraka Swamiji** with **Mel Sithamur Jain Mutt**.
 
 ---
 
-## 4. Key Components & Implementation Specifications
+## 2. Multi-lingual Content Specifications
 
-### A. Header & Sticky Quick-Donate Bar
-- **Top Bar**: Sacred Jain symbol (Ahinsa / Swastika motif), Temple Title, Emergency Trustee Contact drawer button, and multi-language pill switcher (`ENG` | `தமிழ்` | `हिंदी` | `ಕನ್ನಡ`).
-- **Sticky Mobile Bottom Bar**: Fixed quick action bar visible on mobile devices with a primary golden "⚡ Pay via UPI" button.
+### 2.1 Hero Headings & Blessings
 
-### B. Mobile UPI Payment Engine
-- **UPI VPA Details**: `f051m01588@indianbk`
-- **Payee Name**: `SHRI VIRSHABANATH BHAGAWAN JAIN TEMPLE OTHALAVADI`
-- **Amount Chips**:
-  - `₹1,008` (Sacred Offering)
-  - `₹5,000` (Devotee Contribution)
-  - `₹11,000` ⭐ **Stone Plaque Donor Tier** (Name engraved on permanent stone plaque)
-  - `₹25,000` (Pillar Sponsor)
-  - `₹50,000` (Major Benefactor)
-  - `Custom Amount Input`
-- **Dynamic URI Generator**: `upi://pay?pa=f051m01588%40indianbk&pn=SHRI%20VIRSHABANATH%20BHAGAWAN%20JAIN%20TEMPLE%20OTHALAVADI&am=${amount}&cu=INR`
-- **Copy Buttons**: Copy UPI VPA, Bank Account No (`8350857706`), IFSC (`IDIB000D074`) with animated toast feedback ("Copied to clipboard!").
+- **Tamil (`ta`)**:
+  - `hero_heading`: "திருக்கோயில் திருப்பணி, தியாகி நிவாஸ் புதிய கட்டிடம் மற்றும் பஞ்சகல்யாண பிரதிஷ்டை நிதி உதவி வேண்டுகோள்"
+  - `hero_blessing`: "அரஹந்தகிரி ஜைன மடம் ஸ்வஸ்திஸ்ரீ தவளகீர்த்தி பட்டாரக சுவாமிகள் & மேல் சித்தாமூர் ஜைன மடம் ஸ்வஸ்திஸ்ரீ லட்சுமிசேன பட்டாரக சுவாமிகள் ஆகிய இருமடாதிபதிகளின் நல்வழிகாட்டுதலுடன்"
+- **English (`en`)**:
+  - `hero_heading`: "Sacred Renovation, Tyagi Niwas Construction & Pancha Kalyana Pradhista Appeal"
+  - `hero_blessing`: "Under the benign guidance of Swasti Sri Dhavalakeerthi Bhattaraka Swamiji (Arihantagiri Jain Mutt) & Swasti Sri Lakshmisena Bhattaraka Swamiji (Mel Sithamur Jain Mutt)"
+- **Hindi (`hi`)**:
+  - `hero_heading`: "मंदिर जीर्णोद्धार, त्यागी निवास निर्माण एवं पंचकल्याणक प्रतिष्ठा हेतु पावन अपील"
+  - `hero_blessing`: "अरहंतगिरि जैन मठ स्वस्ति श्री धवलकीर्ति भट्टारक स्वामीजी एवं मेलसित्तामूर जैन मठ स्वस्ति श्री लक्ष्मीसेन भट्टारक स्वामीजी के पावन मार्गदर्शन में"
+- **Kannada (`kn`)**:
+  - `hero_heading`: "ದೇವಾಲಯ ಜೀರ್ಣೋದ್ಧಾರ, ತ್ಯಾಗಿ ನಿವಾಸ ನಿರ್ಮಾಣ ಹಾಗೂ ಪಂಚಕಲ್ಯಾಣ ಪ್ರತಿಷ್ಠಾಪನೆಯ ಪವಿತ್ರ ಮನವಿ"
+  - `hero_blessing`: "ಅರಿಹಂತಗಿರಿ ಜೈನ್ ಮಠದ ಸ್ವಸ್ತಿ ಶ್ರೀ ಧವಳಕೀರ್ತಿ ಭಟ್ಟಾರಕ ಸ್ವಾಮೀಜಿ ಮತ್ತು ಮೇಲ್ ಸಿತ್ತಾಮೂರ್ ಜೈನ್ ಮಠದ ಸ್ವಸ್ತಿ ಶ್ರೀ ಲಕ್ಷ್ಮೀಸೇನ ಭಟ್ಟಾರಕ ಸ್ವಾಮೀಜಿ ಅವರ ದಿವ್ಯ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ"
 
-### C. Multilingual Notice & Proof Section
-- Displays full authentic notice text translated into English, Tamil, Hindi, and Kannada.
-- Includes tabs to view scanned **Color Notice Photos** and **Black & White Proof Scans**.
+### 2.2 Official Notice Body Updates
 
-### D. Renovation Estimates & PDF Proof Generator
-- Displays the 11 key work items from the engineering estimate:
-  1. Garbhagriha leaky terrace repair (125 m²) – ₹5,00,000
-  2. Moolavar Gopuram repairs & color wash (25 m²) – ₹4,50,000
-  3. Temple compound wall raising & barbed fencing (120 m) – ₹3,24,000
-  4. Complete temple re-wiring – ₹1,00,000
-  5. Lightning arrestor erection (80m) – ₹1,00,000
-  6. Yathi Nivas new construction (278.70 m² / 3,000 sq.ft) – ₹84,16,740
-  7. Restroom (4 Nos) & Bathroom (4 Nos) construction – ₹3,20,000
-  8. Compound wall for Yathi Nivas (200 m) – ₹4,00,000
-  9. Footstone / Granite flooring around temple (8,000 sq.ft) – ₹12,00,000
-  10. 24 Tirthankara Mandapam construction (24 idols @ ₹30k) – ₹7,20,000
-  11. Borewell & overhead water tank with electric motors – ₹2,00,000
-  - **Total**: ₹1,27,30,740 (~₹1.27 Crores)
-- **PDF Options**:
-  - Direct download button for `proposal.pdf`.
-  - Print/Export Proof button that triggers browser print mode formatted with `@media print` CSS for saving a official donation summary proof.
-
-### E. Responsive Photo Gallery
-- Grid view of all 21 temple images with touch gestures, swipe/click lightbox modal for full-screen view.
-
-### F. Trustee Contact Information & Location Map
-- **President**: D. Dharmapalan (+91 6369346503)
-- **Secretary**: N. Ponnappan (+91 9788391633)
-- **Treasurer**: P. Rajaperumal (+91 9524026692)
-- **Bank Branch**: Indian Bank, Devikapuram Branch (Code 02322)
-- **Google Maps Location Link**: [https://share.google/9k4PHPMGBsX1xCUaL](https://share.google/9k4PHPMGBsX1xCUaL) (Includes "Get Directions" button & interactive embed/link card).
+All notice bodies in `ta.js`, `en.js`, `hi.js`, and `kn.js` will explicitly state:
+1. Restoration and Jirnoddhara renovation of Sri 1008 Virshabanath Jinalaya.
+2. New construction of Tyagi Niwas building.
+3. Conducting sacred **Panchakalyana Mahotsava Pradhista** after completion of renovation work.
+4. Correct pairing of Swasti Sri Dhavalakeerthi Swamiji (Arihantagiri) and Swasti Sri Lakshmisena Swamiji (Mel Sithamur).
 
 ---
 
-## 5. Verification & Testing Plan
+## 3. Frontend & Responsive Layout Architecture
 
-1. **Mobile Responsiveness**: Test on mobile screen viewports (360px, 390px, 412px) and tablet/desktop layouts.
-2. **UPI Deep Linking**: Verify `upi://` link generation with custom and preset amounts.
-3. **i18n Testing**: Verify all 4 languages (English, Tamil, Hindi, Kannada) render correctly without text clipping.
-4. **PDF Generation & Download**: Verify original PDF download links and web-to-pdf print output layout.
-5. **Static Build Check**: Execute `npm run build` and test the static output directory `dist` for Cloudflare deployment readiness.
+### 3.1 Header Navbar (`.navbar`)
+
+- Refactor `.header-content` for mobile viewports (`< 640px`):
+  - Stack logo block and language selector cleanly.
+  - Set `.site-title` font size dynamically using fluid typography (`clamp(1.05rem, 4.5vw, 1.25rem)`) and line-height `1.3`.
+  - Prevent title overflow beyond right screen edge.
+- Language Selector Pills:
+  - Default active pill set to Tamil (`ta`).
+  - Equal spacing and padding on mobile screens.
+
+### 3.2 Button System & Typography (`.btn`, `.btn-upi-pay`, `.chip`)
+
+- Set `display: inline-flex; align-items: center; justify-content: center; text-align: center;`.
+- Set `min-height: 44px; line-height: 1.35; box-sizing: border-box;`.
+- Responsive padding and word-wrap for multi-word Tamil labels (e.g. `📋 திருப்பணி திட்டமதிப்பீடு காண்க`).
+- Standardize `.btn-upi-pay` and `.btn-gold` button structures so icons and text align gracefully without awkward clipping.
+
+### 3.3 Default Language Settings
+
+- Update `i18n.js`: `let currentLang = 'ta';`
+- Update `main.js`: `setLanguage('ta')` on load and set `.lang-btn[data-lang="ta"]` active.
+- Update `index.html`: Set default `<html lang="ta">` and fallback static DOM labels to Tamil.
+
+---
+
+## 4. Verification Plan
+
+1. Verify layout across mobile, tablet, and desktop viewports (320px, 375px, 414px, 768px, 1024px) for zero horizontal scrolling or title clipping.
+2. Verify default language initialization to Tamil (`ta`) upon fresh load.
+3. Verify language switching across all 4 languages (`ta`, `en`, `hi`, `kn`) to confirm Panchakalyanam and Bhattarak names update accurately.
+4. Verify button text alignment and touch target usability.
