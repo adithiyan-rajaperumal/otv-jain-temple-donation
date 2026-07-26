@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="/assets/index-CJ3Zyp6-.js"></script>
+  <script type="module" crossorigin src="/assets/index-BovxeCKS.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-CZPYea3S.css">
 </head>
 <body>
@@ -95,10 +95,10 @@
       
       <div class="vpa-box">
         <div class="vpa-info">
-          <span class="vpa-label" style="display:block; font-size:0.85rem; color:var(--text-muted);">UPI Recipient VPA:</span>
+          <span class="vpa-label" style="display:block; font-size:0.85rem; color:var(--text-muted);" data-i18n="vpa_label">UPI Recipient VPA:</span>
           <strong class="vpa-text">f051m01588@indianbk</strong>
         </div>
-        <button id="copy-vpa-btn" class="btn btn-sm btn-outline">📋 Copy UPI ID</button>
+        <button id="copy-vpa-btn" class="btn btn-sm btn-outline" data-i18n="btn_copy_vpa">📋 Copy UPI ID</button>
       </div>
 
       <!-- Preset Amount Selector -->
@@ -114,17 +114,17 @@
 
         <div class="custom-amount-wrap">
           <span>₹</span>
-          <input type="text" id="custom-amount-input" placeholder="Or enter custom amount" />
+          <input type="text" id="custom-amount-input" placeholder="Or enter custom amount" data-i18n-placeholder="custom_amount_placeholder" />
         </div>
       </div>
 
       <!-- Action Buttons -->
       <div class="donation-actions no-print">
         <a id="pay-upi-btn" href="#" class="btn-upi-pay">
-          <span>📱 Pay via Any UPI App</span>
+          <span data-i18n="btn_pay_upi_app">📱 Pay Directly via Any UPI App</span>
           <span class="btn-upi-subtext">Google Pay • PhonePe • Paytm • BHIM</span>
         </a>
-        <button id="view-qr-btn" class="btn btn-outline btn-block">🔍 View & Scan UPI QR Code</button>
+        <button id="view-qr-btn" class="btn btn-outline btn-block" data-i18n="btn_view_qr">🔍 View & Scan UPI QR Code</button>
       </div>
 
       <!-- Bank Details Card -->
@@ -257,10 +257,10 @@
   <!-- Sticky Mobile Quick-Donate Bar -->
   <div class="sticky-donate-bar no-print">
     <div>
-      <small style="display:block; color:var(--text-muted); font-size:0.75rem;">Sacred Contribution</small>
+      <small style="display:block; color:var(--text-muted); font-size:0.75rem;" data-i18n="sacred_contribution">Sacred Contribution</small>
       <strong style="color:var(--primary-terracotta); font-size:0.85rem;">f051m01588@indianbk</strong>
     </div>
-    <a href="#donate-section" class="btn btn-gold btn-sm">⚡ Donate Now</a>
+    <a href="#donate-section" class="btn btn-gold btn-sm" data-i18n="btn_donate_now">⚡ Donate Now</a>
   </div>
 
   <!-- Fullscreen QR Code Modal -->
@@ -269,7 +269,12 @@
       <button id="close-qr-modal" class="modal-close">&times;</button>
       <h3 style="color:var(--primary-terracotta); margin-top:0;">Scan UPI QR Code</h3>
       <img src="/assets/images/upi-qr.png" alt="UPI QR Code" class="qr-modal-img" />
-      <p style="font-size:0.9rem; color:var(--text-muted);">Scan with Google Pay, PhonePe, Paytm, BHIM, or any UPI payment app</p>
+      <button id="download-qr-btn" class="btn btn-gold btn-block" style="margin-top:10px;" data-i18n="btn_download_qr">
+        📥 Download QR Code to Gallery
+      </button>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin-top:10px; line-height:1.4;" data-i18n="qr_modal_tip">
+        Browsing on mobile? Download QR image to gallery -> Open GPay/PhonePe -> Scan QR -> Select 'Upload from Gallery'.
+      </p>
     </div>
   </div>
 
