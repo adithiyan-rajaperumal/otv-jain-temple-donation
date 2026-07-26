@@ -14,6 +14,9 @@ export function initUPI() {
 
   let currentAmount = "11000";
 
+  const downloadQrBtn = document.getElementById('download-qr-btn');
+  const qrModalImg = document.querySelector('.qr-modal-img');
+
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
       chips.forEach(c => c.classList.remove('active'));
@@ -34,16 +37,29 @@ export function initUPI() {
       if (val) {
         chips.forEach(c => c.classList.remove('active'));
         currentAmount = val;
-        updateUPILink();
+      } else {
+        currentAmount = "11000";
       }
+      updateUPILink();
     });
+  }
+
+  function getQrImageUrl(amount) {
+    const amountParam = amount ? `&am=${amount}` : '';
+    const noteParam = `&tn=${encodeURIComponent("Othalavadi Temple Renovation")}`;
+    const upiUrl = `upi://pay?pa=${encodeURIComponent(UPI_VPA)}&pn=${encodeURIComponent(PAYEE_NAME)}${amountParam}&cu=INR${noteParam}`;
+    return `https://quickchart.io/qr?text=${encodeURIComponent(upiUrl)}&size=300&margin=1`;
   }
 
   function updateUPILink() {
     const amountParam = currentAmount ? `&am=${currentAmount}` : '';
-    const upiUrl = `upi://pay?pa=${encodeURIComponent(UPI_VPA)}&pn=${encodeURIComponent(PAYEE_NAME)}${amountParam}&cu=INR`;
+    const noteParam = `&tn=${encodeURIComponent("Othalavadi Temple Renovation")}`;
+    const upiUrl = `upi://pay?pa=${encodeURIComponent(UPI_VPA)}&pn=${encodeURIComponent(PAYEE_NAME)}${amountParam}&cu=INR${noteParam}`;
     if (payBtn) {
       payBtn.setAttribute('href', upiUrl);
+    }
+    if (qrModalImg) {
+      qrModalImg.src = getQrImageUrl(currentAmount);
     }
   }
 
@@ -58,10 +74,34 @@ export function initUPI() {
   }
 
   if (qrModalBtn && qrModal) {
-    qrModalBtn.addEventListener('click', () => qrModal.classList.add('active'));
+    qrModalBtn.addEventListener('click', () => {
+      updateUPILink();
+      qrModal.classList.add('active');
+    });
   }
   if (closeQrBtn && qrModal) {
     closeQrBtn.addEventListener('click', () => qrModal.classList.remove('active'));
+  }
+
+  if (downloadQrBtn) {
+    downloadQrBtn.addEventListener('click', async () => {
+      try {
+        const qrUrl = getQrImageUrl(currentAmount);
+        const response = await fetch(qrUrl);
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = `1008_Temple_UPI_QR_₹${currentAmount}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(blobUrl);
+        showToast("QR Code image downloaded to gallery!");
+      } catch (err) {
+        window.open(getQrImageUrl(currentAmount), '_blank');
+      }
+    });
   }
 
   updateUPILink();
