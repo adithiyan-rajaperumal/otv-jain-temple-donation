@@ -3,6 +3,7 @@ export const en = {
   temple_location: "Othalavadi, Tiruvannamalai Dist, Tamil Nadu",
   hero_heading: "Sacred Renovation, Tyagi Niwas Construction & Pancha Kalyana Pradhista Appeal",
   hero_blessing: "Under the benign guidance of Swasti Sri Dhavalakeerthi Bhattaraka Swamiji (Arihantagiri Jain Mutt) & Swasti Sri Lakshmisena Bhattaraka Swamiji (Mel Sithamur Jain Mutt)",
+  history_badge: "10th Century Chola Antiquity",
   history_brief: "An ancient 10th-century Jain pilgrimage shrine historically known as 'Olaipadi' and patronized by Chola King Othalan, who praised Lord Adinathar as 'Aniyatha Azhagar'. Inscriptions confirm Pallichandam land gifts granted to this Jinalayam.",
   btn_donate_now: "⚡ Pay via Any UPI App",
   btn_view_proposal: "📋 View Renovation Estimate",
