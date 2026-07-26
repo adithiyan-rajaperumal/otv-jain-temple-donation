@@ -10,7 +10,14 @@ export function setLanguage(lang) {
   if (!translations[lang]) return;
   currentLang = lang;
   document.documentElement.lang = lang;
-  
+
+  // Save preference to localStorage
+  try {
+    localStorage.setItem('temple_lang', lang);
+  } catch (e) {
+    // Storage inaccessible fallback
+  }
+
   // Text content updates
   const elements = document.querySelectorAll('[data-i18n]');
   elements.forEach(el => {
@@ -36,6 +43,30 @@ export function setLanguage(lang) {
   }
 
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+}
+
+export function resolveInitialLanguage() {
+  const validLangs = ['ta', 'en', 'hi', 'kn'];
+  
+  // 1. Check URL query param ?lang=xx
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang && validLangs.includes(urlLang)) {
+      return urlLang;
+    }
+  } catch (e) {}
+
+  // 2. Check localStorage
+  try {
+    const savedLang = localStorage.getItem('temple_lang');
+    if (savedLang && validLangs.includes(savedLang)) {
+      return savedLang;
+    }
+  } catch (e) {}
+
+  // 3. Fallback default
+  return 'ta';
 }
 
 export function t(key) {
