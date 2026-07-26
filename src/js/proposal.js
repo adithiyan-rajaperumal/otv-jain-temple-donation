@@ -5,8 +5,9 @@ export function renderProposalTable() {
   const container = document.getElementById('proposal-table-container');
   if (!container) return;
 
-  let html = `
-    <div class="table-responsive">
+  // 1. Desktop Table HTML
+  let desktopHtml = `
+    <div class="table-responsive proposal-table-desktop">
       <table class="proposal-table">
         <thead>
           <tr>
@@ -21,7 +22,7 @@ export function renderProposalTable() {
   `;
 
   proposalData.items.forEach(item => {
-    html += `
+    desktopHtml += `
       <tr>
         <td>${item.id}</td>
         <td><strong>${t(item.descKey)}</strong></td>
@@ -32,7 +33,7 @@ export function renderProposalTable() {
     `;
   });
 
-  html += `
+  desktopHtml += `
         </tbody>
         <tfoot>
           <tr class="total-row">
@@ -44,7 +45,43 @@ export function renderProposalTable() {
     </div>
   `;
 
-  container.innerHTML = html;
+  // 2. Mobile Stacked Cards HTML (< 600px)
+  let mobileCardsHtml = `<div class="proposal-cards-mobile">`;
+
+  proposalData.items.forEach(item => {
+    mobileCardsHtml += `
+      <div class="proposal-item-card">
+        <div class="card-item-header">
+          <span class="item-number-badge">#${item.id}</span>
+          <h4 class="card-item-title">${t(item.descKey)}</h4>
+        </div>
+        <div class="card-item-details">
+          <div class="detail-pill">
+            <small>${t('th_qty')}</small>
+            <strong>${item.qty}</strong>
+          </div>
+          <div class="detail-pill">
+            <small>${t('th_rate')}</small>
+            <strong>${item.rate}</strong>
+          </div>
+        </div>
+        <div class="card-item-footer">
+          <span>${t('th_amount')}</span>
+          <strong class="card-amount-badge">${item.formattedAmount}</strong>
+        </div>
+      </div>
+    `;
+  });
+
+  mobileCardsHtml += `
+    <div class="proposal-mobile-total-card">
+      <span>${t('total_estimated_amount')}</span>
+      <strong class="total-amount-highlight">${proposalData.formattedTotal}</strong>
+    </div>
+  </div>
+  `;
+
+  container.innerHTML = desktopHtml + mobileCardsHtml;
 }
 
 export function initProposalActions() {
