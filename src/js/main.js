@@ -1,7 +1,7 @@
 import { setLanguage, resolveInitialLanguage, getCurrentLanguage, t } from './i18n.js';
 import { initUPI, showToast, showToastAndCopy } from './upi.js';
 import { renderProposalTable, initProposalActions } from './proposal.js';
-import { initGallery } from './gallery.js';
+import { initGallery, openLightbox } from './gallery.js';
 
 function initCredentialCopyButtons() {
   const copyButtons = [
@@ -110,15 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Proof Images & Architectural Plans Lightbox Viewer
   const proofImgs = document.querySelectorAll('.proof-thumbnails img, .plan-card img');
-  const lightbox = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-img');
-
   proofImgs.forEach(img => {
     img.addEventListener('click', () => {
-      if (lightbox && lightboxImg) {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
-      }
+      const caption = img.getAttribute('title') || img.getAttribute('alt') || '';
+      openLightbox(img.src, caption);
     });
   });
 });

@@ -370,6 +370,26 @@
       </div>
     </section>
 
+    <!-- Temple Works Progress Gallery Section -->
+    <section id="progress-section" class="card progress-card no-print">
+      <div class="progress-header text-center">
+        <span class="badge badge-sacred">Live Updates</span>
+        <h3 class="section-title" data-i18n="progress_title">Temple Works On-Ground Progress</h3>
+        <p class="section-subtitle" data-i18n="progress_subtitle">Live photographic updates of ongoing restoration and expansion milestones</p>
+      </div>
+
+      <div class="progress-tabs-container">
+        <div class="progress-tabs" role="tablist" aria-label="Milestone Category Filters">
+          <button class="progress-tab active" data-filter="all" data-i18n="tab_all_works" role="tab" aria-selected="true">All Works (12)</button>
+          <button class="progress-tab" data-filter="bhoomi_pooja" data-i18n="tab_bhoomi_pooja" role="tab" aria-selected="false">Bhoomi Pooja (6)</button>
+          <button class="progress-tab" data-filter="borewell" data-i18n="tab_borewell" role="tab" aria-selected="false">Borewell &amp; Motor (3)</button>
+          <button class="progress-tab" data-filter="ground_levelling" data-i18n="tab_ground_levelling" role="tab" aria-selected="false">Ground Levelling (3)</button>
+        </div>
+      </div>
+
+      <div id="progress-grid" class="progress-grid"></div>
+    </section>
+
     <!-- Temple Gallery Section -->
     <section class="card gallery-section no-print">
       <h3 class="section-title" data-i18n="gallery_title">Temple Photo Gallery</h3>
@@ -452,6 +472,7 @@
     <div class="modal-content lightbox-content">
       <button id="lightbox-close" class="modal-close" style="color:white; font-size:2.5rem; top:-35px; right:0;">&times;</button>
       <img id="lightbox-img" src="" alt="Temple / Notice Preview" />
+      <div id="lightbox-caption" class="lightbox-caption" style="display:none;"></div>
     </div>
   </div>
 
