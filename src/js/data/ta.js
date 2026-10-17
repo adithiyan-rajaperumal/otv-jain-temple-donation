@@ -94,6 +94,14 @@ export const ta = {
   btn_download_80g: "📥 80G உத்தரவு நகல் பதிவிறக்கு (PDF)",
   btn_download_12a: "📥 12A பதிவு சான்றிதழ் பதிவிறக்கு (PDF)",
   btn_download_trust_deed: "📥 பதிவு பத்திர நகல் பதிவிறக்கு (PDF)",
+  tax_identifiers_heading: "அங்கீகரிக்கப்பட்ட வருமான வரி அடையாள எண்கள் & URN",
+  official_certifications_heading: "அங்கீகரிக்கப்பட்ட சான்றிதழ்கள் & பதிவு செய்யப்பட்ட அறக்கட்டளை பத்திரம்",
+  qr_modal_title: "UPI QR குறியீட்டை ஸ்கேன் செய்க",
+  btn_print_proof: "🖨️ அச்சிடுக / சுத்தமான PDF நகல் சேமிக்க",
+  yathi_plans_heading_1: "முன்மொழியப்பட்ட தியாகி நிவாஸ் 3D முகப்பு & வரைபடம்",
+  yathi_plans_heading_2: "சர்வே எண் 545 நில அமைவிடம் & தள வரைபடம்",
+  yathi_specs_heading: "தியாகி நிவாஸ் கட்டிட தொழில்நுட்ப விவரங்கள்",
+  notice_proofs_heading: "அச்சிடப்பட்ட முறையான அறிவிப்பு வண்ண நகல்கள்",
 
   // Arihantagiri Bhattarak Swamiji Blessing Letter
   bhattarak_blessing_title: "அரஹந்தகிரி மடாதிபதியின் ஆசிச்செய்தி",

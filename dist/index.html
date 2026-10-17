@@ -31,8 +31,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="/assets/index-BovxeCKS.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CZPYea3S.css">
+  <script type="module" crossorigin src="/assets/index-CBR-N9jG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BjUthhyk.css">
 </head>
 <body>
 
@@ -43,6 +43,7 @@
     <p>Bank Account Name: 1008 SHRI VIRSHABANATH BHAGWAN JAIN TEMPLE TRUST, OTHALAVADI</p>
     <p>Account No: 8350857706 | IFSC: IDIB000D074 | Indian Bank Devikapuram Branch</p>
     <p>UPI ID: f051m01588@indianbk</p>
+    <p class="print-tax-meta">PAN: <strong>AAATZ4555B</strong> | 80G Provisional Approval URN: <strong>AAATZ4555BF20261</strong> | 12A Registration URN: <strong>AAATZ4555BE20261</strong> (50% Tax Exemption)</p>
     <hr>
   </div>
 
@@ -137,6 +138,151 @@
       </div>
     </section>
 
+    <!-- 80G & 12A Tax Exemption & Trust Credentials Section -->
+    <section id="tax-exemptions" class="card tax-card">
+      <h3 class="section-title" data-i18n="tax_exemption_title">Income Tax Exemption & Trust Credentials (80G & 12A)</h3>
+      
+      <!-- 80G Benefit Highlight Banner -->
+      <div class="tax-benefit-banner">
+        <div class="tax-banner-icon">🛡️</div>
+        <div class="tax-banner-content">
+          <div class="tax-badge-wrap">
+            <span class="tax-highlight-tag">80G TAX BENEFIT</span>
+            <span class="tax-validity-tag" data-i18n="tax_assessment_years_val">From TY 2026-27 to TY 2028-29</span>
+          </div>
+          <h4 class="tax-banner-title" data-i18n="tax_80g_benefit_banner">50% Tax Deduction under Section 80G of Income Tax Act</h4>
+          <p class="tax-banner-text" data-i18n="tax_80g_subtitle">Donations to 1008 Shri Virshabanath Bhagawan Jain Temple Trust are eligible for 50% tax exemption under Section 80G(5)(iv) of the Income Tax Act, 1961.</p>
+        </div>
+      </div>
+
+      <!-- Credentials & Registration Grid -->
+      <div class="trust-credentials-grid">
+        
+        <!-- Registration Details Card -->
+        <div class="credential-card">
+          <div class="credential-card-header">
+            <span class="credential-icon">🏛️</span>
+            <h4 data-i18n="trust_reg_details">Registered Religious & Charitable Trust</h4>
+          </div>
+          <ul class="credential-list">
+            <li>
+              <span class="credential-label" data-i18n="trust_reg_no_label">Trust Registration No:</span>
+              <strong class="credential-value" data-i18n="trust_reg_no_val">14/2026 (Book 4, Sub-Registrar Chetpet)</strong>
+            </li>
+            <li>
+              <span class="credential-label" data-i18n="trust_reg_date_label">Registration Date:</span>
+              <strong class="credential-value" data-i18n="trust_reg_date_val">17/06/2026</strong>
+            </li>
+            <li>
+              <span class="credential-label" data-i18n="trust_members_label">Trust Members:</span>
+              <strong class="credential-value" data-i18n="trust_members_val">108 Members</strong>
+            </li>
+            <li>
+              <span class="credential-label" data-i18n="trust_land_label">Dedicated Land:</span>
+              <strong class="credential-value" data-i18n="trust_land_val">20 Cents (Donated by 4 Village Families)</strong>
+            </li>
+            <li>
+              <span class="credential-label" data-i18n="tax_assessment_years_label">Tax Exemption Period:</span>
+              <strong class="credential-value" data-i18n="tax_assessment_years_val">From TY 2026-27 to TY 2028-29</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Official Identifiers Card with One-Click Copy -->
+        <div class="credential-card identifiers-card">
+          <div class="credential-card-header">
+            <span class="credential-icon">📋</span>
+            <h4 data-i18n="tax_identifiers_heading">Official Tax Identifiers & URNs</h4>
+          </div>
+          
+          <div class="identifier-items">
+            <!-- PAN Item -->
+            <div class="identifier-item">
+              <div class="identifier-meta">
+                <span class="identifier-label" data-i18n="pan_label">Permanent Account Number (PAN):</span>
+                <span class="identifier-code">AAATZ4555B</span>
+              </div>
+              <button id="copy-pan-btn" class="btn btn-sm btn-outline copy-btn" data-copy="AAATZ4555B" data-label="PAN" data-i18n="btn_copy_pan">
+                📋 Copy PAN
+              </button>
+            </div>
+
+            <!-- 80G URN Item -->
+            <div class="identifier-item">
+              <div class="identifier-meta">
+                <span class="identifier-label" data-i18n="urn_80g_label">80G Provisional Approval URN:</span>
+                <span class="identifier-code">AAATZ4555BF20261</span>
+              </div>
+              <button id="copy-80g-btn" class="btn btn-sm btn-outline copy-btn" data-copy="AAATZ4555BF20261" data-label="80G URN">
+                📋 Copy URN
+              </button>
+            </div>
+
+            <!-- 12A URN Item -->
+            <div class="identifier-item">
+              <div class="identifier-meta">
+                <span class="identifier-label" data-i18n="urn_12a_label">12A Provisional Registration URN:</span>
+                <span class="identifier-code">AAATZ4555BE20261</span>
+              </div>
+              <button id="copy-12a-btn" class="btn btn-sm btn-outline copy-btn" data-copy="AAATZ4555BE20261" data-label="12A URN">
+                📋 Copy URN
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Official Documents Download Row -->
+      <div class="trust-doc-downloads no-print">
+        <h4 class="downloads-heading" data-i18n="official_certifications_heading">Official Certifications & Registered Deed</h4>
+        <div class="doc-download-grid">
+          <a href="/assets/docs/form_80G_provisional_approval.pdf" download="1008_Sri_Vrishabanath_Temple_Form_80G_Approval.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer">
+            <span class="doc-icon">📄</span>
+            <span class="doc-btn-text" data-i18n="btn_download_80g">📥 Download 80G Approval (PDF)</span>
+          </a>
+          <a href="/assets/docs/form_12A_provisional_registration.pdf" download="1008_Sri_Vrishabanath_Temple_Form_12A_Registration.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer">
+            <span class="doc-icon">📄</span>
+            <span class="doc-btn-text" data-i18n="btn_download_12a">📥 Download 12A Certificate (PDF)</span>
+          </a>
+          <a href="/assets/docs/trust_registration_masked.pdf" download="1008_Sri_Vrishabanath_Temple_Trust_Deed_Masked.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer">
+            <span class="doc-icon">📄</span>
+            <span class="doc-btn-text" data-i18n="btn_download_trust_deed">📥 Download Masked Trust Deed (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arihantagiri Mutt Bhattarak Swamiji Blessing Section -->
+    <section id="bhattarak-blessing-section" class="card blessing-card">
+      <div class="blessing-badge-wrap text-center">
+        <span class="badge badge-sacred" data-i18n="bhattarak_title_designation">Pontiff, Sri Jain Mutt, Thirumalai - Arihantagiri</span>
+      </div>
+      
+      <h3 class="section-title" data-i18n="bhattarak_blessing_title">Blessing Appeal from Arihantagiri Mutt</h3>
+      <p class="blessing-subtitle text-center" data-i18n="bhattarak_blessing_subtitle">Holy invocation and benediction from Swasthi Shri Dhavalakeerthi Bhattaraka Swamiji</p>
+      
+      <div class="blessing-box">
+        <div class="blessing-halo-wrap">
+          <span class="blessing-halo">🪔</span>
+        </div>
+        <div class="blessing-body">
+          <h4 class="pontiff-name" data-i18n="bhattarak_name">Bhattaraka Chinthamani Swasthi Shree Dhavalakeerthi Swamiji</h4>
+          <blockquote class="blessing-quote">
+            <p data-i18n="bhattarak_summary">On 26/08/2026, Thirumalai Arihantagiri Swasthi Shri Thavalakeerthi Swamigal personally graced Othalavadi and conducted the sacred Bhoomi Pooja for the temple renovation, Gopuram restoration, 24 Tirthankara mandapam, compound wall, and new Tyagi Niwas & Multipurpose Hall. Swamiji blessed all donors and urged the global Jain community and dharma devotees to contribute wholeheartedly towards this noble 1,000-year-old sacred shrine.</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="blessing-actions no-print text-center">
+        <a id="download-bhattarak-letter-btn" href="/assets/docs/bhattarak_letter_ta.pdf" download="Bhattarak_Swamiji_Blessing_Appeal_ta.pdf" class="btn btn-gold btn-block" target="_blank" rel="noopener noreferrer">
+          <span class="doc-icon">📄</span>
+          <span data-i18n="btn_download_bhattarak_letter">📥 Download Blessing Letter (PDF)</span>
+        </a>
+        <small class="blessing-note">Available in Tamil, English, Hindi & Kannada based on selected language</small>
+      </div>
+    </section>
+
     <!-- Notice Section -->
     <section class="card notice-card">
       <h3 class="section-title" data-i18n="notice_title">Official Renovation Notice</h3>
@@ -144,7 +290,7 @@
       
       <!-- Proof Images -->
       <div class="notice-proofs no-print">
-        <h4 style="color:var(--primary-terracotta);">Printed Notice Color Scans & Proofs</h4>
+        <h4 style="color:var(--primary-terracotta);" data-i18n="notice_proofs_heading">Printed Notice Color Scans & Proofs</h4>
         <div class="proof-thumbnails">
           <img src="/assets/images/notices/english_notice_color.jpg" alt="English Notice Color" title="Click to view full notice" />
           <img src="/assets/images/notices/tamil_notice_colour.jpg" alt="Tamil Notice Color" title="Click to view full notice" />
@@ -159,32 +305,56 @@
       <h3 class="section-title" data-i18n="proposal_title">Work Estimation & Proposed Yathi Nivas Structure</h3>
       
       <div class="proposal-actions no-print">
-        <a href="/assets/docs/proposal.pdf" download="1008_Sri_Vrishabanath_Temple_Renovation_Proposal.pdf" class="btn btn-outline">
-          📄 Download Original Proposal PDF
+        <a href="/assets/docs/estimate_1_temple_renovation.pdf" download="Estimate_1_Temple_Renovation.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_1">
+          📥 Download Package 1 Estimate (PDF)
         </a>
-        <button id="print-proof-btn" class="btn btn-gold">
+        <a href="/assets/docs/estimate_2_muni_maharaj_guest_house.pdf" download="Estimate_2_Muni_Maharaj_Guest_House.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_2">
+          📥 Download Package 2 Estimate (PDF)
+        </a>
+        <a href="/assets/docs/estimate_3_multipurpose_hall.pdf" download="Estimate_3_Multipurpose_Hall.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_3">
+          📥 Download Package 3 Estimate (PDF)
+        </a>
+        <button id="print-proof-btn" class="btn btn-gold" data-i18n="btn_print_proof">
           🖨️ Print / Save Clean PDF Proof
         </button>
       </div>
 
-      <!-- Total Budget Banner -->
-      <div class="budget-banner">
-        <span>Total Estimated Renovation Budget:</span>
-        <strong class="total-badge">₹1,27,30,740 (~₹1.27 Crores)</strong>
+      <div id="proposal-table-container">
+        <!-- Static Fallback Content (Certified ₹76.16 Lakhs Budget) -->
+        <div class="budget-banner proposal-grand-total-banner">
+          <div class="banner-top-row">
+            <div class="banner-title-group">
+              <span class="banner-subtitle" data-i18n="revised_estimate_subtitle">Official detailed estimates prepared and certified by Er. K. Sundararajan (Licensed Building Surveyor)</span>
+              <h4 class="banner-title" data-i18n="revised_estimate_title">Certified Civil Engineering Renovation Estimates</h4>
+            </div>
+            <div class="banner-amount-badge">
+              <span class="amount-label" data-i18n="total_certified_budget">TOTAL CERTIFIED PROJECT BUDGET:</span>
+              <strong class="total-badge">₹76,16,000 <span class="amount-lakhs">(~₹76.16 Lakhs)</span></strong>
+            </div>
+          </div>
+          <div class="engineer-cert-badge-box">
+            <div class="cert-shield-icon">🏛️</div>
+            <div class="cert-details">
+              <div class="cert-headline" data-i18n="engineer_certified_badge">Certified by Er. K. Sundararajan (Reg. No: 038/LS/2019/00015)</div>
+              <div class="cert-subtext">Licensed Building Surveyor &amp; Consulting Civil Engineer • Sevoor, Arni • Ph: 9486370724</div>
+            </div>
+            <div class="cert-status-badge">
+              <span data-i18n="certified_civil_estimate">✓ Certified Civil Estimate</span>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div id="proposal-table-container"></div>
 
       <!-- Yathi Nivas Architectural & Site Plan Visual Showcase -->
       <div class="yathi-plans-grid no-print" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin:20px 0;">
         <div class="plan-card" style="background:#FFF9EE; border:1px solid var(--border-gold); padding:12px; border-radius:10px; text-align:center;">
-          <h4 style="margin:0 0 8px 0; color:var(--primary-terracotta);">Proposed Yathi Nivas 3D Elevation & Floor Plan</h4>
+          <h4 style="margin:0 0 8px 0; color:var(--primary-terracotta);" data-i18n="yathi_plans_heading_1">Proposed Yathi Nivas 3D Elevation & Floor Plan</h4>
           <img src="/assets/images/yathi_nivas_architectural_plan.jpg" alt="Proposed Yathi Nivas Architectural Floor Plan" class="proof-thumbnails-img" style="width:100%; height:220px; object-fit:contain; border-radius:6px; cursor:pointer; background:white;" title="Click to view full architectural blueprint" />
           <small style="display:block; margin-top:6px; color:var(--text-muted);">Tap image to enlarge 3D Front Elevation & 3,000 Sq.ft Floor Plan</small>
         </div>
         
         <div class="plan-card" style="background:#FFF9EE; border:1px solid var(--border-gold); padding:12px; border-radius:10px; text-align:center;">
-          <h4 style="margin:0 0 8px 0; color:var(--primary-terracotta);">Survey No. 545 Plot Layout & Site Plan</h4>
+          <h4 style="margin:0 0 8px 0; color:var(--primary-terracotta);" data-i18n="yathi_plans_heading_2">Survey No. 545 Plot Layout & Site Plan</h4>
           <img src="/assets/images/yathi_nivas_site_plan.jpg" alt="Yathi Nivas Land Survey Plot Layout" class="proof-thumbnails-img" style="width:100%; height:220px; object-fit:contain; border-radius:6px; cursor:pointer; background:white;" title="Click to view full land survey layout" />
           <small style="display:block; margin-top:6px; color:var(--text-muted);">Tap image to enlarge 693.12 m² Plot Survey Dimensions</small>
         </div>
@@ -192,13 +362,33 @@
 
       <!-- Yathi Nivas Specs -->
       <div class="yathi-nivas-box">
-        <h4>Proposed Yathi Nivas Structure Specifications</h4>
+        <h4 data-i18n="yathi_specs_heading">Proposed Yathi Nivas Structure Specifications</h4>
         <ul>
           <li><strong>Total Built-Up Area:</strong> 3,000 Sq.Feet (Ground Floor)</li>
           <li><strong>Land Survey Area:</strong> 693.12 m² (Plot Nos 3, 4A, 4B - Survey No 545)</li>
           <li><strong>Architectural Layout:</strong> 6 Spacious Rooms with attached toilets, Central Lounge & Sitting Area (20'x20'), Puja/Meditation Room (10'x8'), Store Room, and Entrance Verandah (20'x8').</li>
         </ul>
       </div>
+    </section>
+
+    <!-- Temple Works Progress Gallery Section -->
+    <section id="progress-section" class="card progress-card no-print">
+      <div class="progress-header text-center">
+        <span class="badge badge-sacred">Live Updates</span>
+        <h3 class="section-title" data-i18n="progress_title">Temple Works On-Ground Progress</h3>
+        <p class="section-subtitle" data-i18n="progress_subtitle">Live photographic updates of ongoing restoration and expansion milestones</p>
+      </div>
+
+      <div class="progress-tabs-container">
+        <div class="progress-tabs" role="tablist" aria-label="Milestone Category Filters">
+          <button class="progress-tab active" data-filter="all" data-i18n="tab_all_works" role="tab" aria-selected="true">All Works (12)</button>
+          <button class="progress-tab" data-filter="bhoomi_pooja" data-i18n="tab_bhoomi_pooja" role="tab" aria-selected="false">Bhoomi Pooja (6)</button>
+          <button class="progress-tab" data-filter="borewell" data-i18n="tab_borewell" role="tab" aria-selected="false">Borewell &amp; Motor (3)</button>
+          <button class="progress-tab" data-filter="ground_levelling" data-i18n="tab_ground_levelling" role="tab" aria-selected="false">Ground Levelling (3)</button>
+        </div>
+      </div>
+
+      <div id="progress-grid" class="progress-grid"></div>
     </section>
 
     <!-- Temple Gallery Section -->
@@ -209,7 +399,7 @@
 
     <!-- Contacts & Google Maps Section -->
     <section class="card contact-card">
-      <h3 class="section-title">Trustee Contacts & Location</h3>
+      <h3 class="section-title" data-i18n="contact_title">Trustee Contacts & Location</h3>
       
       <div class="contacts-grid">
         <div class="contact-item">
@@ -231,7 +421,7 @@
 
       <!-- Travel Routes Info -->
       <div class="yathi-nivas-box" style="margin-bottom: 20px;">
-        <h4 style="margin-top:0;">Travel Routes & Nearby Distances</h4>
+        <h4 style="margin-top:0;" data-i18n="routes_heading">Travel Routes & Nearby Distances</h4>
         <p style="font-size:0.9rem; margin-bottom:8px;">
           • <strong>Arni:</strong> 18 km &nbsp;|&nbsp; 
           • <strong>Chetpet:</strong> 19 km &nbsp;|&nbsp; 
@@ -244,7 +434,7 @@
 
       <!-- Google Maps Card -->
       <div class="location-box text-center">
-        <h4>Temple Location & Directions</h4>
+        <h4 data-i18n="location_heading">Temple Location & Directions</h4>
         <p style="font-size:0.9rem;">1008 Sri Vrishabanath Bhagwan Jain Temple, Othalavadi Village, Chetpet Taluk, Tiruvannamalai District, Tamil Nadu – 632326<br/><small>(GPS Coordinates: 12.54798, 79.24764)</small></p>
         <a href="https://share.google/9k4PHPMGBsX1xCUaL" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
           📍 Open Location in Google Maps
@@ -267,7 +457,7 @@
   <div id="qr-modal" class="modal no-print">
     <div class="modal-content text-center">
       <button id="close-qr-modal" class="modal-close">&times;</button>
-      <h3 style="color:var(--primary-terracotta); margin-top:0;">Scan UPI QR Code</h3>
+      <h3 style="color:var(--primary-terracotta); margin-top:0;" data-i18n="qr_modal_title">Scan UPI QR Code</h3>
       <img src="/assets/images/upi-qr.png" alt="UPI QR Code" class="qr-modal-img" />
       <button id="download-qr-btn" class="btn btn-gold btn-block" style="margin-top:10px;" data-i18n="btn_download_qr">
         📥 Download QR Code to Gallery
@@ -283,6 +473,7 @@
     <div class="modal-content lightbox-content">
       <button id="lightbox-close" class="modal-close" style="color:white; font-size:2.5rem; top:-35px; right:0;">&times;</button>
       <img id="lightbox-img" src="" alt="Temple / Notice Preview" />
+      <div id="lightbox-caption" class="lightbox-caption" style="display:none;"></div>
     </div>
   </div>
 

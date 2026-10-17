@@ -94,6 +94,14 @@ export const en = {
   btn_download_80g: "📥 Download 80G Approval (PDF)",
   btn_download_12a: "📥 Download 12A Certificate (PDF)",
   btn_download_trust_deed: "📥 Download Masked Trust Deed (PDF)",
+  tax_identifiers_heading: "Official Tax Identifiers & URNs",
+  official_certifications_heading: "Official Certifications & Registered Deed",
+  qr_modal_title: "Scan UPI QR Code",
+  btn_print_proof: "🖨️ Print / Save Clean PDF Proof",
+  yathi_plans_heading_1: "Proposed Yathi Nivas 3D Elevation & Floor Plan",
+  yathi_plans_heading_2: "Survey No. 545 Plot Layout & Site Plan",
+  yathi_specs_heading: "Proposed Yathi Nivas Structure Specifications",
+  notice_proofs_heading: "Printed Notice Color Scans & Proofs",
 
   // Arihantagiri Bhattarak Swamiji Blessing Letter
   bhattarak_blessing_title: "Blessing Appeal from Arihantagiri Mutt",

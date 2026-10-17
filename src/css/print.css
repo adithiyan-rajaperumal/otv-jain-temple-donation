@@ -1,49 +1,382 @@
 @media print {
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
   body {
     background: white !important;
     color: black !important;
-    font-size: 11pt !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
     padding-bottom: 0 !important;
+    margin: 0 !important;
   }
-  .no-print, .sticky-donate-bar, .language-selector, nav, .gallery-section, .proof-thumbnails, .donation-actions, .proposal-actions, .hero-cta-group, button {
+
+  /* Hide interactive, navigational, modal, and screen-only controls */
+  .no-print,
+  .sticky-donate-bar,
+  .language-selector,
+  nav,
+  header.navbar,
+  .gallery-section,
+  .proof-thumbnails,
+  .donation-actions,
+  .proposal-actions,
+  .hero-cta-group,
+  .blessing-actions,
+  .trust-doc-downloads,
+  .progress-tabs-container,
+  .modal,
+  #qr-modal,
+  #lightbox-modal,
+  button,
+  .btn,
+  .copy-btn,
+  .btn-link,
+  .btn-package-pdf {
     display: none !important;
   }
+
+  /* Printable Official Header */
   .print-header {
     display: block !important;
     text-align: center;
     border-bottom: 2px solid #8B2613;
     padding-bottom: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
-  .card, .package-card, .proposal-grand-summary-card {
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-    padding: 16px !important;
-    margin-bottom: 16px !important;
-    page-break-inside: avoid;
+
+  .print-header h1 {
+    font-size: 15pt !important;
+    margin: 0 0 6px 0;
+    color: #8B2613 !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
   }
-  .table-responsive {
-    overflow: visible !important;
+
+  .print-header p {
+    margin: 2px 0 !important;
+    font-size: 9pt !important;
+    color: #333 !important;
   }
-  table {
+
+  .print-header .print-tax-meta {
+    font-size: 8.5pt !important;
+    background: #F4EFEB !important;
+    border: 1px solid #D6C2B5 !important;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 6px !important;
+    color: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Cards & Section Structure */
+  .container {
+    max-width: 100% !important;
     width: 100% !important;
-    border-collapse: collapse !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  th, td {
-    border: 1px solid #777 !important;
-    padding: 6px 8px !important;
-    font-size: 10pt !important;
-  }
-  th {
-    background: #eee !important;
+
+  .card,
+  .package-card,
+  .proposal-grand-summary-card,
+  .tax-card,
+  .blessing-card,
+  .credential-card {
+    border: 1px solid #bbb !important;
+    background: white !important;
     color: black !important;
+    padding: 12px !important;
+    margin-bottom: 14px !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border-radius: 6px !important;
   }
-  .budget-banner {
-    background: #f0f0f0 !important;
+
+  .section-title {
+    color: #8B2613 !important;
+    font-size: 12pt !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .section-title::after {
+    display: none !important;
+  }
+
+  /* Certified ₹76.16L Budget Banner in Print */
+  .budget-banner,
+  .proposal-grand-total-banner {
+    background: #FBF8F5 !important;
+    border: 2px solid #8B2613 !important;
     color: black !important;
-    border: 1px solid #777 !important;
+    padding: 12px 16px !important;
+    margin-bottom: 14px !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
+
+  .banner-subtitle {
+    color: #666 !important;
+    font-size: 7.5pt !important;
+  }
+
+  .banner-title {
+    color: #8B2613 !important;
+    font-size: 11pt !important;
+  }
+
+  .amount-label {
+    color: #555 !important;
+    font-size: 7.5pt !important;
+  }
+
   .total-badge {
     color: #8B2613 !important;
+    font-size: 13pt !important;
+  }
+
+  .amount-lakhs {
+    font-size: 9.5pt !important;
+    color: #333 !important;
+  }
+
+  .engineer-cert-badge-box {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    padding: 8px 12px !important;
+    color: black !important;
+  }
+
+  .cert-headline {
+    color: #8B2613 !important;
+    font-size: 9pt !important;
+    font-weight: 700 !important;
+  }
+
+  .cert-subtext {
+    color: #555 !important;
+    font-size: 8pt !important;
+  }
+
+  .cert-status-badge span {
+    background: #EBF7EE !important;
+    color: #1E6B2C !important;
+    border: 1px solid #A3D8B0 !important;
+    font-size: 7.5pt !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Package Cards & Itemized Breakdown */
+  .package-card-header {
+    background: #F8F5F0 !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 8px 12px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .package-badge {
+    background: #8B2613 !important;
+    color: white !important;
+    font-size: 7pt !important;
+    padding: 2px 6px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .package-verified-tag {
+    background: #EBF7EE !important;
+    color: #1E6B2C !important;
+    border: 1px solid #A3D8B0 !important;
+    font-size: 7pt !important;
+    padding: 2px 6px !important;
+  }
+
+  .package-title {
+    font-size: 10.5pt !important;
+    color: #8B2613 !important;
+    margin: 2px 0 !important;
+  }
+
+  .package-subtitle {
+    font-size: 8pt !important;
+    color: #555 !important;
+    margin: 0 !important;
+  }
+
+  .package-amount-badge {
+    font-size: 11pt !important;
+    color: #8B2613 !important;
+  }
+
+  .package-specs-section {
+    background: #FAFAFA !important;
+    border: 1px dashed #ccc !important;
+    padding: 8px 10px !important;
+    margin: 8px 0 !important;
+  }
+
+  .specs-title {
+    font-size: 8.5pt !important;
+    color: #8B2613 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .spec-pill {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    padding: 4px 8px !important;
+    font-size: 8pt !important;
+  }
+
+  /* Tables */
+  .table-responsive,
+  .package-table-responsive {
+    overflow: visible !important;
+  }
+
+  table,
+  .package-item-table {
+    width: 100% !important;
+    min-width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  th, td {
+    border: 1px solid #888 !important;
+    padding: 4px 6px !important;
+    font-size: 8.5pt !important;
+    color: black !important;
+  }
+
+  th {
+    background: #EFEFEF !important;
+    font-weight: 700 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .package-subtotal-row {
+    background: #F5F5F5 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Grand Summary Formula Card */
+  .proposal-grand-summary-card {
+    background: #FAF7F2 !important;
+    border: 1.5px solid #8B2613 !important;
+    padding: 10px 14px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .grand-summary-formula {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .formula-block {
+    background: white !important;
+    border: 1px solid #bbb !important;
+    padding: 6px 8px !important;
+  }
+
+  .formula-label {
+    font-size: 7pt !important;
+    color: #444 !important;
+  }
+
+  .formula-val {
+    font-size: 9pt !important;
+    color: #8B2613 !important;
+  }
+
+  .formula-block.formula-total {
+    background: #8B2613 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .formula-block.formula-total .formula-label,
+  .formula-block.formula-total .formula-val-total,
+  .formula-block.formula-total .formula-sub {
+    color: white !important;
+  }
+
+  /* 80G & 12A Tax Exemptions in Print */
+  .tax-benefit-banner {
+    background: #FBF7EE !important;
+    border: 1.5px solid #8B2613 !important;
+    padding: 8px 12px !important;
+    color: black !important;
+  }
+
+  .tax-banner-title {
+    color: #8B2613 !important;
+    font-size: 10.5pt !important;
+    margin: 4px 0 !important;
+  }
+
+  .tax-banner-text {
+    font-size: 8pt !important;
+    color: #333 !important;
+    margin: 0 !important;
+  }
+
+  .identifier-item {
+    border: 1px solid #ddd !important;
+    background: white !important;
+    padding: 6px 10px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .identifier-label {
+    font-size: 8pt !important;
+    color: #444 !important;
+  }
+
+  .identifier-code {
+    background: #EEE !important;
+    border: 1px solid #AAA !important;
+    color: #111 !important;
+    font-size: 8.5pt !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Bhattarak Blessing Section in Print */
+  .blessing-card {
+    border: 1px solid #D4AF37 !important;
+    background: #FFFDF8 !important;
+  }
+
+  .pontiff-name {
+    color: #8B2613 !important;
+    font-size: 10.5pt !important;
+  }
+
+  .blessing-quote p {
+    font-size: 8.5pt !important;
+    color: #222 !important;
+    line-height: 1.4 !important;
   }
 }

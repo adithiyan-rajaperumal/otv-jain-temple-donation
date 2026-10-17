@@ -185,23 +185,23 @@ export function renderProposalTable() {
       </div>
       <div class="grand-summary-formula">
         <div class="formula-block">
-          <span class="formula-label">Pkg 1: Temple Renovation</span>
-          <strong class="formula-val">₹31,60,000</strong>
+          <span class="formula-label" data-i18n="${proposalData.packages[0].titleKey}">${t(proposalData.packages[0].titleKey)}</span>
+          <strong class="formula-val">${proposalData.packages[0].formattedTotal}</strong>
         </div>
         <span class="formula-op">+</span>
         <div class="formula-block">
-          <span class="formula-label">Pkg 2: Muni Guest House</span>
-          <strong class="formula-val">₹18,61,000</strong>
+          <span class="formula-label" data-i18n="${proposalData.packages[1].titleKey}">${t(proposalData.packages[1].titleKey)}</span>
+          <strong class="formula-val">${proposalData.packages[1].formattedTotal}</strong>
         </div>
         <span class="formula-op">+</span>
         <div class="formula-block">
-          <span class="formula-label">Pkg 3: Multipurpose Hall</span>
-          <strong class="formula-val">₹25,95,000</strong>
+          <span class="formula-label" data-i18n="${proposalData.packages[2].titleKey}">${t(proposalData.packages[2].titleKey)}</span>
+          <strong class="formula-val">${proposalData.packages[2].formattedTotal}</strong>
         </div>
         <span class="formula-eq">=</span>
         <div class="formula-block formula-total">
           <span class="formula-label" data-i18n="total_certified_budget">${t('total_certified_budget')}</span>
-          <strong class="formula-val-total">₹76,16,000</strong>
+          <strong class="formula-val-total">${proposalData.formattedGrandTotal}</strong>
           <span class="formula-sub">(~₹76.16 Lakhs)</span>
         </div>
       </div>

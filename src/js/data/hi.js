@@ -94,6 +94,14 @@ export const hi = {
   btn_download_80g: "📥 80G आदेश डाउनलोड करें (PDF)",
   btn_download_12a: "📥 12A प्रमाण पत्र डाउनलोड करें (PDF)",
   btn_download_trust_deed: "📥 पंजीकृत ट्रस्ट डीड डाउनलोड करें (PDF)",
+  tax_identifiers_heading: "आधिकारिक आयकर पहचानकर्ता और यूआरएन (URNs)",
+  official_certifications_heading: "आधिकारिक प्रमाण पत्र और पंजीकृत ट्रस्ट विलेख",
+  qr_modal_title: "UPI QR कोड स्कैन करें",
+  btn_print_proof: "🖨️ प्रिंट करें / स्वच्छ PDF प्रति सुरक्षित करें",
+  yathi_plans_heading_1: "प्रस्तावित त्यागी निवास 3D एलिवेशन और फ्लोर प्लान",
+  yathi_plans_heading_2: "सर्वेक्षण संख्या 545 भूखंड लेआउट एवं साइट प्लान",
+  yathi_specs_heading: "प्रस्तावित त्यागी निवास संरचना विनिर्देश",
+  notice_proofs_heading: "मुद्रित अपील पत्र रंगीन स्कैन और प्रमाण",
 
   // Arihantagiri Bhattarak Swamiji Blessing Letter
   bhattarak_blessing_title: "अरहंतगिरि मठाधीश का पावन आशीर्वाद",

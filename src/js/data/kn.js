@@ -94,6 +94,14 @@ export const kn = {
   btn_download_80g: "📥 80G ಆದೇಶ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",
   btn_download_12a: "📥 12A ಪ್ರಮಾಣಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",
   btn_download_trust_deed: "📥 ನೋಂದಾಯಿತ ಟ್ರಸ್ಟ್ ಡೀಡ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",
+  tax_identifiers_heading: "ಅಧಿಕೃತ ಆದಾಯ ತೆರಿಗೆ ಗುರುತಿಸುವಿಕೆಗಳು ಮತ್ತು ಯುಆರ್‌ಎನ್‌ಗಳು",
+  official_certifications_heading: "ಅಧಿಕೃತ ಪ್ರಮಾಣಪತ್ರಗಳು ಮತ್ತು ನೋಂದಾಯಿತ ಟ್ರಸ್ಟ್ ಪತ್ರ",
+  qr_modal_title: "UPI QR ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",
+  btn_print_proof: "🖨️ ಪ್ರಿಂಟ್ ಮಾಡಿ / ಶುದ್ಧ PDF ಪ್ರತಿಯನ್ನು ಉಳಿಸಿ",
+  yathi_plans_heading_1: "ಪ್ರಸ್ತಾವಿತ ತ್ಯಾಗಿ ನಿವಾಸ 3D ಎಲಿವೇಶನ್ ಮತ್ತು ಮಹಡಿ ಯೋಜನೆ",
+  yathi_plans_heading_2: "ಸರ್ವೆ ನಂ. 545 ನಿವೇಶನ ವಿನ್ಯಾಸ ಮತ್ತು ಸೈಟ್ ಯೋಜನೆ",
+  yathi_specs_heading: "ಪ್ರಸ್ತಾವಿತ ತ್ಯಾಗಿ ನಿವಾಸ ಕಟ್ಟಡ ವಿವರಣೆಗಳು",
+  notice_proofs_heading: "ಮುದ್ರಿತ ಮನವಿ ಪತ್ರದ ಬಣ್ಣದ ಸ್ಕ್ಯಾನ್ ಮತ್ತು ಪುರಾವೆಗಳು",
 
   // Arihantagiri Bhattarak Swamiji Blessing Letter
   bhattarak_blessing_title: "ಅರಿಹಂತಗಿರಿ ಮಠಾಧೀಶರ ದಿವ್ಯ ಆಶೀರ್ವಾದ",
