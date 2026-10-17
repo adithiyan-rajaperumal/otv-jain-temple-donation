@@ -838,3 +838,397 @@ body {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==========================================================================
+   Trust Credentials, 80G/12A Tax Exemptions & Swamiji Blessing Card
+   ========================================================================== */
+
+/* Tax Exemption Section */
+.tax-card {
+  border-top: 4px solid var(--accent-gold-bright);
+}
+
+.tax-benefit-banner {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFF1CD 100%);
+  border: 2px solid var(--primary-gold);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.15);
+}
+
+.tax-banner-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.tax-banner-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tax-badge-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tax-highlight-tag {
+  background: var(--primary-terracotta);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tax-validity-tag {
+  background: var(--terracotta-dark);
+  color: var(--accent-gold-bright);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tax-banner-title {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  color: var(--primary-terracotta);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.tax-banner-text {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* Trust Credentials Grid */
+.trust-credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.credential-card {
+  background: #FCFAF6;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.credential-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border-gold);
+}
+
+.credential-card-header h4 {
+  margin: 0;
+  color: var(--primary-terracotta);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.credential-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.credential-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.credential-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.credential-label {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 2px;
+}
+
+.credential-value {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Identifier items with one-click copy */
+.identifier-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.identifier-item {
+  background: #FFFFFF;
+  border: 1px solid #EBE4DA;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  transition: all 0.2s ease;
+}
+
+.identifier-item:hover {
+  border-color: var(--primary-gold);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.15);
+}
+
+.identifier-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1 1 180px;
+}
+
+.identifier-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.identifier-code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--primary-terracotta);
+  letter-spacing: 0.5px;
+  word-break: break-all;
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.copy-btn.btn-copied {
+  background: #2E7D32 !important;
+  color: #FFFFFF !important;
+  border-color: #2E7D32 !important;
+}
+
+/* Official Documents Download Row */
+.trust-doc-downloads {
+  background: #FFFDF9;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 18px;
+}
+
+.downloads-heading {
+  margin: 0 0 14px 0;
+  color: var(--primary-terracotta);
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.doc-download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.btn-doc-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: 1.5px solid var(--primary-terracotta);
+  color: var(--primary-terracotta);
+  background: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.btn-doc-download:hover {
+  background: var(--primary-terracotta);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 38, 19, 0.2);
+}
+
+.btn-doc-download .doc-icon {
+  font-size: 1.1rem;
+}
+
+/* Bhattarak Swamiji Blessing Card */
+.blessing-card {
+  border-top: 4px solid var(--primary-gold);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
+}
+
+.blessing-badge-wrap {
+  margin-bottom: 12px;
+}
+
+.badge-sacred {
+  background: linear-gradient(135deg, var(--primary-terracotta), var(--terracotta-dark));
+  color: var(--accent-gold-bright);
+  padding: 6px 18px;
+  font-size: 0.82rem;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(139, 38, 19, 0.2);
+  display: inline-block;
+}
+
+.blessing-subtitle {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin: -10px 0 20px 0;
+}
+
+.blessing-box {
+  background: #FFF9EE;
+  border-left: 5px solid var(--primary-gold);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.12);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.blessing-halo-wrap {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.blessing-halo {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.blessing-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pontiff-name {
+  margin: 0 0 10px 0;
+  color: var(--primary-terracotta);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.blessing-quote {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.blessing-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.blessing-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Mobile Responsiveness for Tax & Blessing Components */
+@media (max-width: 640px) {
+  .tax-benefit-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 14px;
+  }
+  
+  .tax-badge-wrap {
+    justify-content: center;
+  }
+  
+  .trust-credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .identifier-item {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .identifier-meta {
+    text-align: center;
+  }
+  
+  .identifier-code {
+    font-size: 1rem;
+  }
+  
+  .copy-btn {
+    width: 100%;
+  }
+  
+  .doc-download-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blessing-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 14px;
+  }
+  
+  .blessing-halo-wrap {
+    padding-top: 0;
+  }
+}
+
