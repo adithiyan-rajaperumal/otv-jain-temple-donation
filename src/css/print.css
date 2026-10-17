@@ -15,7 +15,7 @@
     padding-bottom: 12px;
     margin-bottom: 20px;
   }
-  .card {
+  .card, .package-card, .proposal-grand-summary-card {
     border: 1px solid #ddd !important;
     box-shadow: none !important;
     padding: 16px !important;

@@ -304,21 +304,45 @@
       <h3 class="section-title" data-i18n="proposal_title">Work Estimation & Proposed Yathi Nivas Structure</h3>
       
       <div class="proposal-actions no-print">
-        <a href="/assets/docs/proposal.pdf" download="1008_Sri_Vrishabanath_Temple_Renovation_Proposal.pdf" class="btn btn-outline">
-          📄 Download Original Proposal PDF
+        <a href="/assets/docs/estimate_1_temple_renovation.pdf" download="Estimate_1_Temple_Renovation.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_1">
+          📥 Download Package 1 Estimate (PDF)
+        </a>
+        <a href="/assets/docs/estimate_2_muni_maharaj_guest_house.pdf" download="Estimate_2_Muni_Maharaj_Guest_House.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_2">
+          📥 Download Package 2 Estimate (PDF)
+        </a>
+        <a href="/assets/docs/estimate_3_multipurpose_hall.pdf" download="Estimate_3_Multipurpose_Hall.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_3">
+          📥 Download Package 3 Estimate (PDF)
         </a>
         <button id="print-proof-btn" class="btn btn-gold">
           🖨️ Print / Save Clean PDF Proof
         </button>
       </div>
 
-      <!-- Total Budget Banner -->
-      <div class="budget-banner">
-        <span>Total Estimated Renovation Budget:</span>
-        <strong class="total-badge">₹1,27,30,740 (~₹1.27 Crores)</strong>
+      <div id="proposal-table-container">
+        <!-- Static Fallback Content (Certified ₹76.16 Lakhs Budget) -->
+        <div class="budget-banner proposal-grand-total-banner">
+          <div class="banner-top-row">
+            <div class="banner-title-group">
+              <span class="banner-subtitle" data-i18n="revised_estimate_subtitle">Official detailed estimates prepared and certified by Er. K. Sundararajan (Licensed Building Surveyor)</span>
+              <h4 class="banner-title" data-i18n="revised_estimate_title">Certified Civil Engineering Renovation Estimates</h4>
+            </div>
+            <div class="banner-amount-badge">
+              <span class="amount-label" data-i18n="total_certified_budget">TOTAL CERTIFIED PROJECT BUDGET:</span>
+              <strong class="total-badge">₹76,16,000 <span class="amount-lakhs">(~₹76.16 Lakhs)</span></strong>
+            </div>
+          </div>
+          <div class="engineer-cert-badge-box">
+            <div class="cert-shield-icon">🏛️</div>
+            <div class="cert-details">
+              <div class="cert-headline" data-i18n="engineer_certified_badge">Certified by Er. K. Sundararajan (Reg. No: 038/LS/2019/00015)</div>
+              <div class="cert-subtext">Licensed Building Surveyor &amp; Consulting Civil Engineer • Sevoor, Arni • Ph: 9486370724</div>
+            </div>
+            <div class="cert-status-badge">
+              <span data-i18n="certified_civil_estimate">✓ Certified Civil Estimate</span>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div id="proposal-table-container"></div>
 
       <!-- Yathi Nivas Architectural & Site Plan Visual Showcase -->
       <div class="yathi-plans-grid no-print" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin:20px 0;">
