@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const root = path.resolve('d:/otv_temple_donation/otv-jain-temple-donation');
+const root = path.resolve('.');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf-8');
 const mainCss = fs.readFileSync(path.join(root, 'src/css/main.css'), 'utf-8');
 const mainJs = fs.readFileSync(path.join(root, 'src/js/main.js'), 'utf-8');

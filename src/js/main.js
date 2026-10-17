@@ -6,8 +6,8 @@ import { initGallery, openLightbox } from './gallery.js';
 function initCredentialCopyButtons() {
   const copyButtons = [
     { id: 'copy-pan-btn', fallbackText: 'AAATZ4555B', labelKey: 'btn_copy_pan', fallbackLabel: 'Copy PAN' },
-    { id: 'copy-80g-btn', fallbackText: 'AAATZ4555BF20261', labelKey: null, fallbackLabel: '📋 Copy URN' },
-    { id: 'copy-12a-btn', fallbackText: 'AAATZ4555BE20261', labelKey: null, fallbackLabel: '📋 Copy URN' }
+    { id: 'copy-80g-btn', fallbackText: 'AAATZ4555BF20261', labelKey: 'btn_copy_urn', fallbackLabel: '📋 Copy URN' },
+    { id: 'copy-12a-btn', fallbackText: 'AAATZ4555BE20261', labelKey: 'btn_copy_urn', fallbackLabel: '📋 Copy URN' }
   ];
 
   copyButtons.forEach(cfg => {
@@ -58,6 +58,16 @@ function updateBhattarakDownloadLink(lang) {
   btn.setAttribute('download', filename);
 }
 
+function updateNoticeDownloadLink(lang) {
+  const btn = document.getElementById('download-notice-pdf-btn');
+  if (!btn) return;
+  const currentLang = lang || getCurrentLanguage() || 'ta';
+  const pdfPath = `/assets/docs/notice_${currentLang}.pdf`;
+  const filename = `Official_Notice_${currentLang}.pdf`;
+  btn.setAttribute('href', pdfPath);
+  btn.setAttribute('download', filename);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Modules
   initUPI();
@@ -81,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const lang = btn.getAttribute('data-lang');
       setLanguage(lang);
       updateBhattarakDownloadLink(lang);
+      updateNoticeDownloadLink(lang);
       renderProposalTable(); // re-render table headers with selected language
     });
   });
@@ -88,13 +99,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Credential Copy Buttons
   initCredentialCopyButtons();
 
-  // Initialize Bhattarak Blessing Download Link
+  // Initialize Download Links
   updateBhattarakDownloadLink(initialLang);
+  updateNoticeDownloadLink(initialLang);
 
   document.addEventListener('languageChanged', (e) => {
     if (e.detail && e.detail.lang) {
       updateBhattarakDownloadLink(e.detail.lang);
+      updateNoticeDownloadLink(e.detail.lang);
     }
+    renderProposalTable();
   });
 
   const bhattarakBtn = document.getElementById('download-bhattarak-letter-btn');
@@ -104,16 +118,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const noticeBtn = document.getElementById('download-notice-pdf-btn');
+  if (noticeBtn) {
+    noticeBtn.addEventListener('click', () => {
+      updateNoticeDownloadLink(getCurrentLanguage());
+    });
+  }
+
   renderProposalTable();
   initProposalActions();
   initGallery();
 
-  // Proof Images & Architectural Plans Lightbox Viewer
+  // Proof Images & Architectural Plans Lightbox Viewer with keyboard accessibility
   const proofImgs = document.querySelectorAll('.proof-thumbnails img, .plan-card img');
   proofImgs.forEach(img => {
-    img.addEventListener('click', () => {
+    img.setAttribute('tabindex', '0');
+    img.setAttribute('role', 'button');
+    const openImgLightbox = () => {
       const caption = img.getAttribute('title') || img.getAttribute('alt') || '';
       openLightbox(img.src, caption);
+    };
+    img.addEventListener('click', openImgLightbox);
+    img.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openImgLightbox();
+      }
     });
   });
 });

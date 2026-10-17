@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const root = path.resolve('d:/otv_temple_donation/otv-jain-temple-donation');
+const root = path.resolve('.');
 let totalTests = 0;
 let passedTests = 0;
 let failedTests = 0;
@@ -24,7 +24,7 @@ console.log('====================================================\n');
 // 1. Verify Image Assets in public and dist
 console.log('--- 1. Verifying Progress Photo Files on Disk ---');
 const expectedPhotos = [
-  'public/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_1.png',
+  'public/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_1.jpg',
   'public/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_2.jpg',
   'public/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_3.jpg',
   'public/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_4.jpg',

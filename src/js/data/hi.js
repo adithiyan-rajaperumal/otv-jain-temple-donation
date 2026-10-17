@@ -90,6 +90,7 @@ export const hi = {
   tax_assessment_years_label: "कर छूट की वैधता अवधि:",
   tax_assessment_years_val: "कर वर्ष 2026-27 से 2028-29 तक",
   btn_copy_pan: "PAN कॉपी करें",
+  btn_copy_urn: "📋 URN कॉपी करें",
   pan_copied: "✓ कॉपी किया गया!",
   btn_download_80g: "📥 80G आदेश डाउनलोड करें (PDF)",
   btn_download_12a: "📥 12A प्रमाण पत्र डाउनलोड करें (PDF)",
@@ -201,6 +202,7 @@ export const hi = {
   notice_trust_name: "1008 श्री वृषभनाथ भगवान जैन मंदिर ट्रस्ट, ओथलवाड़ी",
   notice_signoff: "विनीत, समस्त श्रावक - श्राविकाएँ, ओथलवाड़ी।",
   btn_download_notice: "📥 आधिकारिक सूचना पत्र डाउनलोड करें (PDF)",
+  btn_download_notice_pdf: "📄 आधिकारिक सूचना पत्र PDF डाउनलोड करें",
 
   // Full Notice Body Text (Official printed notice verbatim)
   notice_body: `1008 श्री वृषभनाथ जिनालय, ओथलवाड़ी

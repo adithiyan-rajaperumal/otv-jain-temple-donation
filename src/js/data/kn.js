@@ -90,6 +90,7 @@ export const kn = {
   tax_assessment_years_label: "ತೆರಿಗೆ ವಿನಾಯಿತಿ ಅವಧಿ:",
   tax_assessment_years_val: "ಆದಾಯ ವರ್ಷ 2026-27 ರಿಂದ 2028-29 ರವರೆಗೆ",
   btn_copy_pan: "PAN ಕಾಪಿ ಮಾಡಿ",
+  btn_copy_urn: "📋 URN ಕಾಪಿ ಮಾಡಿ",
   pan_copied: "✓ ಕಾಪಿ ಮಾಡಲಾಗಿದೆ!",
   btn_download_80g: "📥 80G ಆದೇಶ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",
   btn_download_12a: "📥 12A ಪ್ರಮಾಣಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",
@@ -201,6 +202,7 @@ export const kn = {
   notice_trust_name: "1008 ಶ್ರೀ ವೃಷಭನಾಥ ಭಗವಾನ್ ಜೈನ್ ಟೆಂಪಲ್ ಟ್ರಸ್ಟ್, ಓದಲವಾಡಿ",
   notice_signoff: "ಇಂತಿ, ಸಮಸ್ತ ಶ್ರಾವಕ - ಶ್ರಾವಕಿಯರು, ಓದಲವಾಡಿ.",
   btn_download_notice: "📥 ಅಧಿಕೃತ ಪ್ರಕಟಣೆ ಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",
+  btn_download_notice_pdf: "📄 ಅಧಿಕೃತ ಪ್ರಕಟಣೆ ಪತ್ರ PDF ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
 
   // Full Notice Body Text (Official printed notice verbatim)
   notice_body: `1008 ಶ್ರೀ ವೃಷಭನಾಥ ಜಿನಾಲಯ, ಓದಲವಾಡಿ

@@ -3,7 +3,7 @@ import { t } from './i18n.js';
 export const progressItems = [
   {
     id: 1,
-    src: '/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_1.png',
+    src: '/assets/images/progress/bhoomi_pooja/Bhoomi_pooja_1.jpg',
     category: 'bhoomi_pooja',
     captionKey: 'progress_photo_bp_1',
     date: '26-08-2026',

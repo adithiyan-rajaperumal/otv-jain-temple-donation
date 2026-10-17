@@ -90,6 +90,7 @@ export const ta = {
   tax_assessment_years_label: "வரி விலக்கு செல்லுபடியாகும் காலம்:",
   tax_assessment_years_val: "மதிப்பீட்டு ஆண்டு 2026-27 முதல் 2028-29 வரை",
   btn_copy_pan: "PAN நகலெடு (Copy)",
+  btn_copy_urn: "📋 URN நகலெடு (Copy)",
   pan_copied: "✓ நகலெடுக்கப்பட்டது!",
   btn_download_80g: "📥 80G உத்தரவு நகல் பதிவிறக்கு (PDF)",
   btn_download_12a: "📥 12A பதிவு சான்றிதழ் பதிவிறக்கு (PDF)",
@@ -201,6 +202,7 @@ export const ta = {
   notice_trust_name: "1008 ஸ்ரீ விருஷபநாத பகவான் ஜெயின் கோவில் அறக்கட்டளை, ஓதலவாடி",
   notice_signoff: "இங்ஙனம், ஸமஸ்த ஸ்ராவக - ஸ்ராவகியர்கள், ஓதலவாடி.",
   btn_download_notice: "📥 அதிகாரப்பூர்வ அழைப்பிதழ் பதிவிறக்கு (PDF)",
+  btn_download_notice_pdf: "📄 அதிகாரப்பூர்வ அழைப்பிதழ் PDF பதிவிறக்கு",
 
   // Full Notice Body Text (Official printed notice verbatim)
   notice_body: `1008 ஸ்ரீவிருஷபநாதர் ஜினாலயம், ஓதலவாடி.

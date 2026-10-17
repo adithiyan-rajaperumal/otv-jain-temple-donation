@@ -8,7 +8,7 @@ import { kn } from '../src/js/data/kn.js';
 import { renderProposalTable, initProposalActions } from '../src/js/proposal.js';
 import { setLanguage } from '../src/js/i18n.js';
 
-const root = path.resolve('d:/otv_temple_donation/otv-jain-temple-donation');
+const root = path.resolve('.');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf-8');
 const mainCss = fs.readFileSync(path.join(root, 'src/css/main.css'), 'utf-8');
 const printCss = fs.readFileSync(path.join(root, 'src/css/print.css'), 'utf-8');
