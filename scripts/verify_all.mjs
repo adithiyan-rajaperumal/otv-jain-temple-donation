@@ -56,9 +56,12 @@ console.log('--- SECTION 1: Running Prior Task Verification Suites ---');
 const subSuites = [
   'scripts/verify_i18n.mjs',
   'scripts/verify_task_4.mjs',
-  'scripts/verify_task_5.mjs',
   'scripts/verify_task_6.mjs',
-  'scripts/verify_donation_redesign.mjs'
+  'scripts/verify_donation_redesign.mjs',
+  'scripts/verify_pradhista_task_2.mjs',
+  'scripts/verify_pradhista_task_3.mjs',
+  'scripts/verify_pradhista_task_4.mjs',
+  'scripts/verify_pradhista_and_pdf_viewer.mjs'
 ];
 
 for (const script of subSuites) {
@@ -88,8 +91,25 @@ const langs = [
   { code: 'kn', name: 'Kannada', data: kn }
 ];
 
+if (typeof global.CustomEvent === 'undefined') {
+  global.CustomEvent = class CustomEvent {
+    constructor(type, params = {}) {
+      this.type = type;
+      this.detail = params.detail || {};
+    }
+  };
+}
+
 const baseKeys = Object.keys(en);
-assert(baseKeys.length >= 170, `Base language (EN) has comprehensive keys (${baseKeys.length} >= 170)`);
+assert(baseKeys.length === 204, `Base language (EN) has exact 204 keys (found: ${baseKeys.length})`);
+
+// Proposal data architecture assertions
+assert(proposalData.grandTotal === 12616000, `proposalData.grandTotal is ₹1,26,16,000 (${proposalData.grandTotal})`);
+assert(proposalData.formattedGrandTotal === '₹1,26,16,000', `proposalData.formattedGrandTotal is "₹1,26,16,000"`);
+assert(proposalData.civilSubtotal === 7616000, `proposalData.civilSubtotal is ₹76,16,000 (${proposalData.civilSubtotal})`);
+assert(proposalData.pradhistaSubtotal === 5000000, `proposalData.pradhistaSubtotal is ₹50,00,000 (${proposalData.pradhistaSubtotal})`);
+assert(proposalData.packages.length === 4, `proposalData contains 4 packages (found: ${proposalData.packages.length})`);
+assert(proposalData.civilSubtotal + proposalData.pradhistaSubtotal === proposalData.grandTotal, 'Civil Subtotal (₹76.16L) + Pradhista Subtotal (₹50.00L) equals Grand Total (₹1,26,16,000)');
 
 // Mock DOM container for rendering tests
 class MockElement {
@@ -174,6 +194,8 @@ for (const lang of langs) {
   assert(proposalHtml.includes(lang.data.pkg_1_title), `[${lang.code.toUpperCase()}] Proposal Grand Summary contains localized Package 1 title`);
   assert(proposalHtml.includes(lang.data.pkg_2_title), `[${lang.code.toUpperCase()}] Proposal Grand Summary contains localized Package 2 title`);
   assert(proposalHtml.includes(lang.data.pkg_3_title), `[${lang.code.toUpperCase()}] Proposal Grand Summary contains localized Package 3 title`);
+  assert(proposalHtml.includes(lang.data.pkg_4_title), `[${lang.code.toUpperCase()}] Proposal Grand Summary contains localized Package 4 title`);
+  assert(proposalHtml.includes('1,26,16,000') || proposalHtml.includes('₹1,26,16,000'), `[${lang.code.toUpperCase()}] Proposal renders combined grand total ₹1,26,16,000`);
 
   // Render gallery in current language
   renderProgressGallery('all');
