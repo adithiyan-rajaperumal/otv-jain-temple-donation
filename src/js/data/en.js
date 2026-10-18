@@ -14,7 +14,7 @@ export const en = {
   btn_view_qr: "🔍 View & Scan UPI QR Code",
   btn_download_qr: "📥 Download QR Code to Gallery",
   btn_copy_vpa: "📋 Copy UPI ID",
-  vpa_label: "UPI Recipient VPA:",
+  vpa_label: "UPI ID (VPA):",
   custom_amount_placeholder: "Or enter custom amount",
   qr_modal_tip: "Browsing on mobile? Download QR image to gallery -> Open GPay/PhonePe -> Scan QR -> Select 'Upload from Gallery'.",
   btn_view_proposal: "📋 View Renovation Estimate",
