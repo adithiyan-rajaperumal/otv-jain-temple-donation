@@ -196,6 +196,16 @@ const requiredKeyGroups = {
     'notice_signoff',
     'btn_download_notice',
     'notice_body'
+  ],
+  'Donation Modal & FAB': [
+    'modal_donation_title',
+    'tab_upi_qr',
+    'tab_bank_transfer',
+    'btn_open_donation_portal',
+    'btn_open_bank_portal',
+    'donation_card_subtitle',
+    'fab_donate',
+    'scan_qr_instantly_hint'
   ]
 };
 

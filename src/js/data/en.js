@@ -249,5 +249,15 @@ PERSONS TO BE CONTACTED FOR FURTHER INFORMATION:
 3. P. Rajaperumal, Treasurer : 9524026692
 
 Yours sincerely,
-ALL SHRAVAKAS - SHRAVIKAS, OTHALAVADI.`
+ALL SHRAVAKAS - SHRAVIKAS, OTHALAVADI.`,
+
+  // Donation Modal, Card & FAB (Redesign)
+  modal_donation_title: "Sacred Renovation Contribution Portal",
+  tab_upi_qr: "📱 UPI & QR Code",
+  tab_bank_transfer: "🏛️ Direct Bank Transfer",
+  btn_open_donation_portal: "⚡ Open Sacred Donation Portal",
+  btn_open_bank_portal: "🏛️ View Bank Transfer Details",
+  donation_card_subtitle: "All contributions are dedicated to the 1008 Sri Vrishabanath Temple renovation, Tyagi Niwas, and community hall. Contributions are eligible for 50% Section 80G tax exemption, and donors contributing ₹11,000 or more will have their names inscribed on the temple stone plaque.",
+  fab_donate: "⚡ Donate Now",
+  scan_qr_instantly_hint: "Scan this QR code with Google Pay, PhonePe, Paytm, BHIM, or any banking app on your phone"
 };
