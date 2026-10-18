@@ -47,19 +47,19 @@ export function renderProposalTable() {
         </div>
       </div>
 
-      <div class="banner-sub-budgets">
+      <div class="banner-sub-budgets sub-budget-row">
         <div class="sub-budget-pill">
           <span class="sub-budget-icon">🏛️</span>
           <div class="sub-budget-info">
             <span class="sub-budget-label" data-i18n="civil_works_subtotal_label">${t('civil_works_subtotal_label')}</span>
-            <strong class="sub-budget-val">${proposalData.formattedCivilSubtotal}</strong>
+            <strong class="sub-budget-val sub-budget-amount">${proposalData.formattedCivilSubtotal}</strong>
           </div>
         </div>
         <div class="sub-budget-pill">
           <span class="sub-budget-icon">🪔</span>
           <div class="sub-budget-info">
             <span class="sub-budget-label" data-i18n="pradhista_subtotal_label">${t('pradhista_subtotal_label')}</span>
-            <strong class="sub-budget-val">${proposalData.formattedPradhistaSubtotal}</strong>
+            <strong class="sub-budget-val sub-budget-amount">${proposalData.formattedPradhistaSubtotal}</strong>
           </div>
         </div>
       </div>
