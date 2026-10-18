@@ -33,7 +33,7 @@ export function renderProposalTable() {
 
   const eng = proposalData.engineer;
 
-  // 1. Grand Total Budget Banner with Engineer Certification
+  // 1. Grand Total Budget Banner with Combined Project Budget & Engineer Certification
   let html = `
     <div class="budget-banner proposal-grand-total-banner">
       <div class="banner-top-row">
@@ -42,8 +42,25 @@ export function renderProposalTable() {
           <h4 class="banner-title" data-i18n="revised_estimate_title">${t('revised_estimate_title')}</h4>
         </div>
         <div class="banner-amount-badge">
-          <span class="amount-label" data-i18n="total_certified_budget">${t('total_certified_budget')}</span>
-          <strong class="total-badge">${proposalData.formattedGrandTotal} <span class="amount-lakhs">(~₹76.16 Lakhs)</span></strong>
+          <span class="amount-label" data-i18n="grand_project_budget_label">${t('grand_project_budget_label')}</span>
+          <strong class="total-badge">${proposalData.formattedGrandTotal} <span class="amount-lakhs">(~₹1.26 Crores)</span></strong>
+        </div>
+      </div>
+
+      <div class="banner-sub-budgets">
+        <div class="sub-budget-pill">
+          <span class="sub-budget-icon">🏛️</span>
+          <div class="sub-budget-info">
+            <span class="sub-budget-label" data-i18n="civil_works_subtotal_label">${t('civil_works_subtotal_label')}</span>
+            <strong class="sub-budget-val">${proposalData.formattedCivilSubtotal}</strong>
+          </div>
+        </div>
+        <div class="sub-budget-pill">
+          <span class="sub-budget-icon">🪔</span>
+          <div class="sub-budget-info">
+            <span class="sub-budget-label" data-i18n="pradhista_subtotal_label">${t('pradhista_subtotal_label')}</span>
+            <strong class="sub-budget-val">${proposalData.formattedPradhistaSubtotal}</strong>
+          </div>
         </div>
       </div>
 
@@ -63,21 +80,25 @@ export function renderProposalTable() {
     </div>
   `;
 
-  // 2. 3 Modular Package Cards
+  // 2. 4 Modular Package Cards (3 Civil Works + 1 Panchakalyana Pradhista Estimate)
   html += `<div class="proposal-packages-list">`;
 
   proposalData.packages.forEach((pkg, index) => {
     const pkgNum = index + 1;
+    const isCeremonial = !!pkg.isCeremonialEstimate;
     const downloadFilename = `Estimate_${pkgNum}_${pkg.id}.pdf`;
 
     html += `
-      <div class="package-card" id="package-card-${pkg.id}">
+      <div class="package-card ${isCeremonial ? 'pkg-ceremonial' : ''}" id="package-card-${pkg.id}">
         <!-- Package Header -->
         <div class="package-card-header">
           <div class="package-header-main">
             <div class="package-badge-row">
               <span class="package-badge">Package ${pkgNum}</span>
-              <span class="package-verified-tag">✓ Certified</span>
+              ${isCeremonial
+                ? `<span class="package-verified-tag badge-ceremonial-estimate" data-i18n="${pkg.badgeKey}">${t(pkg.badgeKey)}</span>`
+                : `<span class="package-verified-tag">✓ Certified</span>`
+              }
             </div>
             <h4 class="package-title" data-i18n="${pkg.titleKey}">${t(pkg.titleKey)}</h4>
             <p class="package-subtitle" data-i18n="${pkg.subtitleKey}">${t(pkg.subtitleKey)}</p>
@@ -87,9 +108,20 @@ export function renderProposalTable() {
               <span class="package-amount-label" data-i18n="package_subtotal">${t('package_subtotal')}</span>
               <strong class="package-amount-badge">${pkg.formattedTotal}</strong>
             </div>
-            <a href="${pkg.pdf}" download="${downloadFilename}" class="btn btn-outline btn-package-pdf no-print" data-i18n="btn_download_${pkg.id}">
-              ${t('btn_download_' + pkg.id)}
-            </a>
+            ${isCeremonial
+              ? `<div class="ceremonial-note-pill no-print">
+                   <span class="pill-icon">🪔</span>
+                   <span class="pill-text" data-i18n="${pkg.badgeKey}">${t(pkg.badgeKey)}</span>
+                 </div>`
+              : `<div class="doc-actions-group package-actions-group no-print">
+                   <button type="button" class="btn btn-outline btn-package-pdf btn-view-pdf" data-pdf-url="${pkg.pdf}" data-pdf-title="${t(pkg.titleKey)}" data-pdf-filename="${downloadFilename}">
+                     <span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">${t('btn_view_pdf')}</span>
+                   </button>
+                   <a href="${pkg.pdf}" download="${downloadFilename}" class="btn btn-outline btn-package-pdf" data-i18n="btn_download_${pkg.id}">
+                     ${t('btn_download_' + pkg.id)}
+                   </a>
+                 </div>`
+            }
           </div>
         </div>
     `;
@@ -206,13 +238,22 @@ export function renderProposalTable() {
           <strong class="package-subtotal-val">${pkg.formattedTotal}</strong>
         </div>
       </div>
-    </div>
     `;
+
+    if (isCeremonial) {
+      html += `
+        <div class="package-ceremonial-footer-note text-center">
+          <small><span class="note-icon">🪔</span> <span data-i18n="${pkg.subtitleKey}">${t(pkg.subtitleKey)}</span></small>
+        </div>
+      `;
+    }
+
+    html += `</div>`;
   });
 
   html += `</div>`;
 
-  // 3. Grand Summary Card with 3-Package Breakdown Formula
+  // 3. Grand Summary Card with 4-Package Breakdown Formula
   html += `
     <div class="proposal-grand-summary-card">
       <div class="grand-summary-header">
@@ -237,11 +278,16 @@ export function renderProposalTable() {
           <span class="formula-label" data-i18n="${proposalData.packages[2].titleKey}">${t(proposalData.packages[2].titleKey)}</span>
           <strong class="formula-val">${proposalData.packages[2].formattedTotal}</strong>
         </div>
+        <span class="formula-op">+</span>
+        <div class="formula-block formula-pradhista">
+          <span class="formula-label" data-i18n="${proposalData.packages[3].titleKey}">${t(proposalData.packages[3].titleKey)}</span>
+          <strong class="formula-val">${proposalData.packages[3].formattedTotal}</strong>
+        </div>
         <span class="formula-eq">=</span>
         <div class="formula-block formula-total">
-          <span class="formula-label" data-i18n="total_certified_budget">${t('total_certified_budget')}</span>
+          <span class="formula-label" data-i18n="grand_project_budget_label">${t('grand_project_budget_label')}</span>
           <strong class="formula-val-total">${proposalData.formattedGrandTotal}</strong>
-          <span class="formula-sub">(~₹76.16 Lakhs)</span>
+          <span class="formula-sub">(~₹1.26 Crores)</span>
         </div>
       </div>
     </div>
@@ -253,10 +299,5 @@ export function renderProposalTable() {
 export const renderProposal = renderProposalTable;
 
 export function initProposalActions() {
-  const printBtn = document.getElementById('print-proof-btn');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      window.print();
-    });
-  }
+  // Legacy print-proof-btn removed in favor of direct in-page PDF modal viewing
 }
