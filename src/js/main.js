@@ -1,7 +1,14 @@
 import { setLanguage, resolveInitialLanguage, getCurrentLanguage, t } from './i18n.js';
-import { initUPI, showToast, showToastAndCopy } from './upi.js';
+import { initUPI, openDonationModal, showToast, showToastAndCopy } from './upi.js';
 import { renderProposalTable, initProposalActions } from './proposal.js';
 import { initGallery, openLightbox } from './gallery.js';
+
+// Expose openDonationModal on window for global / inline access
+if (typeof window !== 'undefined') {
+  window.openDonationModal = openDonationModal;
+}
+
+export { openDonationModal };
 
 function initCredentialCopyButtons() {
   const copyButtons = [
