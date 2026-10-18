@@ -74,7 +74,7 @@ export const en = {
   tax_80g_subtitle: "Donations to 1008 Shri Virshabanath Bhagawan Jain Temple Trust are eligible for 50% tax exemption under Section 80G(5)(iv) of the Income Tax Act, 1961.",
   trust_reg_details: "Registered Religious & Charitable Trust",
   trust_reg_no_label: "Trust Registration No:",
-  trust_reg_no_val: "14/2026 (Book 4, Sub-Registrar Chetpet)",
+  trust_reg_no_val: "14/2026 (Book 4, Sub-Registrar Polur)",
   trust_reg_date_label: "Registration Date:",
   trust_reg_date_val: "17/06/2026",
   trust_members_label: "Trust Members:",
