@@ -259,5 +259,18 @@ ALL SHRAVAKAS - SHRAVIKAS, OTHALAVADI.`,
   btn_open_bank_portal: "🏛️ View Bank Transfer Details",
   donation_card_subtitle: "All contributions are dedicated to the 1008 Sri Vrishabanath Temple renovation, Tyagi Niwas, and community hall. Contributions are eligible for 50% Section 80G tax exemption, and donors contributing ₹11,000 or more will have their names inscribed on the temple stone plaque.",
   fab_donate: "⚡ Donate Now",
-  scan_qr_instantly_hint: "Scan this QR code with Google Pay, PhonePe, Paytm, BHIM, or any banking app on your phone"
+  scan_qr_instantly_hint: "Scan this QR code with Google Pay, PhonePe, Paytm, BHIM, or any banking app on your phone",
+
+  // Panchakalyana Pradhista & Combined Budget & PDF Viewer
+  pkg_4_title: "Panchakalyana Pradhista Mahotsava (5-Day Sacred Festival)",
+  pkg_4_subtitle: "Estimated expenditure for 5-day continuous Annadanam, Vidhan, sacred pooja samagri, pandhal, lighting & logistics",
+  pkg_4_badge: "🪔 5-Day Sacred Festival Estimate",
+  pkg_4_item_1: "Food for 5 Days (Continuous Annadanam for Devotees) & Pradhista Arrangements",
+  pkg_4_item_2: "Vidhan, Homam, Pooja Sacred Items & Samagri",
+  pkg_4_item_3: "Pandhal, Stage, Lighting, Sound System, Generator Rent & General Logistics",
+  grand_project_budget_label: "COMBINED TOTAL PROJECT BUDGET (RENOVATION + PRADHISTA):",
+  civil_works_subtotal_label: "Certified Civil Engineering Works Subtotal (Packages 1-3):",
+  pradhista_subtotal_label: "Panchakalyana Pradhista 5-Day Estimate Subtotal:",
+  btn_view_pdf: "👁️ View Document",
+  pdf_modal_fallback_text: "Having trouble viewing? Open directly in new tab or download using the button above."
 };

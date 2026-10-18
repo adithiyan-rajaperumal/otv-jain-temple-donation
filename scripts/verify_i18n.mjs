@@ -18,10 +18,22 @@ console.log(`Base language (EN) key count: ${enKeys.length}`);
 
 let hasErrors = false;
 
+if (enKeys.length !== 204) {
+  console.error(`❌ Expected base language (EN) key count to be 204, got ${enKeys.length}`);
+  hasErrors = true;
+} else {
+  console.log('✓ Base language (EN) key count is 204');
+}
+
 // 1. Check Key Symmetry
 for (const lang of langs) {
   const keys = Object.keys(lang.data);
   console.log(`Language [${lang.name.toUpperCase()}] key count: ${keys.length}`);
+
+  if (keys.length !== 204) {
+    console.error(`❌ Language [${lang.name.toUpperCase()}] expected 204 keys, got ${keys.length}`);
+    hasErrors = true;
+  }
 
   const missingFromLang = enKeys.filter(k => !keys.includes(k));
   const extraInLang = keys.filter(k => !enKeys.includes(k));
@@ -47,28 +59,42 @@ for (const lang of langs) {
 }
 
 // 2. Check Proposal Data Structure
-console.log('\n=== Checking proposalData.js Certified Estimates ===');
-if (proposalData.grandTotal !== 7616000) {
-  console.error(`❌ Expected proposalData.grandTotal to be 7616000, got ${proposalData.grandTotal}`);
+console.log('\n=== Checking proposalData.js Certified Estimates & Combined Budget ===');
+if (proposalData.grandTotal !== 12616000) {
+  console.error(`❌ Expected proposalData.grandTotal to be 12616000, got ${proposalData.grandTotal}`);
   hasErrors = true;
 } else {
-  console.log('✓ proposalData.grandTotal is 7616000');
+  console.log('✓ proposalData.grandTotal is 12616000');
 }
 
-if (proposalData.formattedGrandTotal !== '₹76,16,000') {
-  console.error(`❌ Expected formattedGrandTotal "₹76,16,000", got "${proposalData.formattedGrandTotal}"`);
+if (proposalData.formattedGrandTotal !== '₹1,26,16,000') {
+  console.error(`❌ Expected formattedGrandTotal "₹1,26,16,000", got "${proposalData.formattedGrandTotal}"`);
   hasErrors = true;
 } else {
-  console.log('✓ proposalData.formattedGrandTotal is "₹76,16,000"');
+  console.log('✓ proposalData.formattedGrandTotal is "₹1,26,16,000"');
 }
 
-if (!Array.isArray(proposalData.packages) || proposalData.packages.length !== 3) {
-  console.error(`❌ Expected proposalData.packages to have 3 packages, got ${proposalData.packages?.length}`);
+if (proposalData.civilSubtotal !== 7616000) {
+  console.error(`❌ Expected proposalData.civilSubtotal to be 7616000, got ${proposalData.civilSubtotal}`);
   hasErrors = true;
 } else {
-  console.log('✓ proposalData.packages has 3 certified packages');
+  console.log('✓ proposalData.civilSubtotal is 7616000 (Certified Civil Works)');
+}
+
+if (proposalData.pradhistaSubtotal !== 5000000) {
+  console.error(`❌ Expected proposalData.pradhistaSubtotal to be 5000000, got ${proposalData.pradhistaSubtotal}`);
+  hasErrors = true;
+} else {
+  console.log('✓ proposalData.pradhistaSubtotal is 5000000 (Panchakalyana Pradhista 5-Day Estimate)');
+}
+
+if (!Array.isArray(proposalData.packages) || proposalData.packages.length !== 4) {
+  console.error(`❌ Expected proposalData.packages to have 4 packages, got ${proposalData.packages?.length}`);
+  hasErrors = true;
+} else {
+  console.log('✓ proposalData.packages has 4 packages (3 Civil + 1 Pradhista)');
   
-  const expectedTotals = [3160000, 1861000, 2595000];
+  const expectedTotals = [3160000, 1861000, 2595000, 5000000];
   let sum = 0;
   proposalData.packages.forEach((pkg, idx) => {
     sum += pkg.total;
@@ -80,11 +106,26 @@ if (!Array.isArray(proposalData.packages) || proposalData.packages.length !== 3)
     }
   });
 
-  if (sum !== 7616000) {
-    console.error(`❌ Sum of packages (${sum}) does not equal 7616000!`);
+  // Verify Package 4 items sum
+  const pkg4 = proposalData.packages.find(p => p.id === 'pkg_4');
+  if (!pkg4) {
+    console.error('❌ Package pkg_4 not found in proposalData.packages!');
     hasErrors = true;
   } else {
-    console.log(`✓ Sum of packages (${sum}) matches Grand Total (7616000)`);
+    const pkg4ItemsSum = pkg4.items.reduce((acc, item) => acc + item.amount, 0);
+    if (pkg4ItemsSum !== 5000000) {
+      console.error(`❌ Package 4 items sum (${pkg4ItemsSum}) does not equal 5000000!`);
+      hasErrors = true;
+    } else {
+      console.log(`  ✓ Package 4 items sum (${pkg4ItemsSum}) matches Package 4 total (5000000)`);
+    }
+  }
+
+  if (sum !== 12616000) {
+    console.error(`❌ Sum of packages (${sum}) does not equal 12616000!`);
+    hasErrors = true;
+  } else {
+    console.log(`✓ Sum of packages (${sum}) matches Grand Total (12616000)`);
   }
 }
 
@@ -206,6 +247,19 @@ const requiredKeyGroups = {
     'donation_card_subtitle',
     'fab_donate',
     'scan_qr_instantly_hint'
+  ],
+  'Panchakalyana Pradhista & PDF Viewer': [
+    'pkg_4_title',
+    'pkg_4_subtitle',
+    'pkg_4_badge',
+    'pkg_4_item_1',
+    'pkg_4_item_2',
+    'pkg_4_item_3',
+    'grand_project_budget_label',
+    'civil_works_subtotal_label',
+    'pradhista_subtotal_label',
+    'btn_view_pdf',
+    'pdf_modal_fallback_text'
   ]
 };
 
