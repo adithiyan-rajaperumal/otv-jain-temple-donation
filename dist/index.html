@@ -31,8 +31,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="/assets/index-Be65Z7i4.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D9l-hHSh.css">
+  <script type="module" crossorigin src="/assets/index-DSIVRT9s.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C59RgP9_.css">
 </head>
 <body>
 
@@ -85,56 +85,46 @@
       </div>
 
       <div class="hero-cta-group no-print">
-        <a href="#donate-section" class="btn btn-gold" data-i18n="btn_donate_now">⚡ UPI செயலி வழியாக நன்கொடை அளிக்க</a>
+        <a id="hero-donate-btn" href="#donate-section" class="btn btn-gold" data-i18n="btn_donate_now">⚡ UPI செயலி வழியாக நன்கொடை அளிக்க</a>
         <a href="#proposal-section" class="btn btn-outline" data-i18n="btn_view_proposal">📋 திருப்பணி திட்டமதிப்பீடு காண்க</a>
       </div>
     </section>
 
-    <!-- UPI Donation Section -->
+    <!-- In-Page Sacred Contribution Overview Card -->
     <section id="donate-section" class="card donation-card">
       <h3 class="section-title" data-i18n="donation_title">Make a Sacred Contribution</h3>
       
-      <div class="vpa-box">
-        <div class="vpa-info">
-          <span class="vpa-label" style="display:block; font-size:0.85rem; color:var(--text-muted);" data-i18n="vpa_label">UPI Recipient VPA:</span>
-          <strong class="vpa-text">f051m01588@indianbk</strong>
-        </div>
-        <button id="copy-vpa-btn" class="btn btn-sm btn-outline" data-i18n="btn_copy_vpa">📋 Copy UPI ID</button>
+      <p class="donation-card-subtext" data-i18n="donation_card_subtitle">
+        All contributions are dedicated to the 1008 Sri Vrishabanath Temple renovation, Tyagi Niwas, and community hall. Contributions are eligible for 50% Section 80G tax exemption, and donors contributing ₹11,000 or more will have their names inscribed on the temple stone plaque.
+      </p>
+
+      <div class="donation-card-badges">
+        <span class="badge badge-sacred">🛡️ 80G 50% Tax Exemption</span>
+        <span class="badge badge-sacred">⭐ ₹11,000+ Stone Plaque Tier</span>
       </div>
 
-      <!-- Preset Amount Selector -->
-      <div class="amount-selector">
-        <label class="selector-label" style="font-weight:700; color:var(--primary-terracotta);" data-i18n="select_amount_label">Select Donation Amount:</label>
-        <div class="preset-chips">
-          <button class="chip" data-amount="1008">₹1,008</button>
-          <button class="chip" data-amount="5000">₹5,000</button>
-          <button class="chip active" data-amount="11000">₹11,000 ⭐ <span data-i18n="plaque_tier">Stone Plaque Tier</span></button>
-          <button class="chip" data-amount="25000">₹25,000</button>
-          <button class="chip" data-amount="50000">₹50,000</button>
-        </div>
-
-        <div class="custom-amount-wrap">
-          <span>₹</span>
-          <input type="text" id="custom-amount-input" placeholder="Or enter custom amount" data-i18n-placeholder="custom_amount_placeholder" />
-        </div>
+      <!-- Main Action Buttons -->
+      <div class="donation-portal-actions no-print">
+        <button id="open-donate-modal-btn" class="btn btn-gold btn-lg">
+          <span data-i18n="btn_open_donation_portal">⚡ Open Sacred Donation Portal</span>
+        </button>
+        <button id="open-bank-modal-btn" class="btn btn-outline">
+          <span data-i18n="btn_open_bank_portal">🏛️ View Bank Transfer Details</span>
+        </button>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="donation-actions no-print">
-        <a id="pay-upi-btn" href="#" class="btn-upi-pay">
-          <span data-i18n="btn_pay_upi_app">📱 Pay Directly via Any UPI App</span>
-          <span class="btn-upi-subtext">Google Pay • PhonePe • Paytm • BHIM</span>
-        </a>
-        <button id="view-qr-btn" class="btn btn-outline btn-block" data-i18n="btn_view_qr">🔍 View & Scan UPI QR Code</button>
-      </div>
-
-      <!-- Bank Details Card -->
-      <div class="bank-details-box">
-        <h4 data-i18n="bank_details_heading">Direct Bank Transfer Details</h4>
-        <p><strong data-i18n="acc_name_label">Account Name:</strong> 1008 SHRI VIRSHABANATH BHAGWAN JAIN TEMPLE TRUST, OTHALAVADI</p>
-        <p><strong data-i18n="acc_no_label">Account No:</strong> 8350857706 <button id="copy-acc-btn" class="btn-link" data-i18n="btn_copy">Copy</button></p>
-        <p><strong data-i18n="bank_name_label">Bank Name:</strong> Indian Bank (Devikapuram Branch - Code 02322)</p>
-        <p><strong data-i18n="ifsc_label">IFSC Code:</strong> IDIB000D074 <button id="copy-ifsc-btn" class="btn-link" data-i18n="btn_copy">Copy</button></p>
+      <!-- Quick Credentials Strip -->
+      <div class="quick-credentials-strip">
+        <div class="credential-pill">
+          <span class="cred-label" data-i18n="vpa_label">UPI Recipient VPA:</span>
+          <strong class="cred-val">f051m01588@indianbk</strong>
+          <button id="copy-vpa-btn" class="btn-copy-chip no-print" data-i18n="btn_copy_vpa">📋 Copy UPI ID</button>
+        </div>
+        <div class="credential-pill">
+          <span class="cred-label">Indian Bank:</span>
+          <span class="cred-detail"><span data-i18n="acc_no_label">Account No:</span> <strong class="cred-val">8350857706</strong> <button id="copy-acc-btn" class="btn-copy-chip no-print" data-i18n="btn_copy">Copy</button></span>
+          <span class="cred-detail"><span data-i18n="ifsc_label">IFSC Code:</span> <strong class="cred-val">IDIB000D074</strong> <button id="copy-ifsc-btn" class="btn-copy-chip no-print" data-i18n="btn_copy">Copy</button></span>
+        </div>
       </div>
     </section>
 
@@ -517,27 +507,127 @@
 
   </main>
 
-  <!-- Sticky Mobile Quick-Donate Bar -->
-  <div class="sticky-donate-bar no-print">
-    <div>
-      <small style="display:block; color:var(--text-muted); font-size:0.75rem;" data-i18n="sacred_contribution">Sacred Contribution</small>
-      <strong style="color:var(--primary-terracotta); font-size:0.85rem;">f051m01588@indianbk</strong>
-    </div>
-    <a href="#donate-section" class="btn btn-gold btn-sm" data-i18n="btn_donate_now">⚡ Donate Now</a>
-  </div>
+  <!-- Floating Mobile Quick-Donate Pill (FAB) -->
+  <button id="mobile-donate-fab" class="mobile-donate-fab no-print" aria-label="Donate Now">
+    <span class="fab-icon">⚡</span>
+    <span class="fab-text" data-i18n="fab_donate">⚡ Donate Now</span>
+  </button>
 
-  <!-- Fullscreen QR Code Modal -->
-  <div id="qr-modal" class="modal no-print">
-    <div class="modal-content text-center">
-      <button id="close-qr-modal" class="modal-close">&times;</button>
-      <h3 style="color:var(--primary-terracotta); margin-top:0;" data-i18n="qr_modal_title">Scan UPI QR Code</h3>
-      <img src="/assets/images/upi-qr.png" alt="UPI QR Code" class="qr-modal-img" />
-      <button id="download-qr-btn" class="btn btn-gold btn-block" style="margin-top:10px;" data-i18n="btn_download_qr">
-        📥 Download QR Code to Gallery
-      </button>
-      <p style="font-size:0.82rem; color:var(--text-muted); margin-top:10px; line-height:1.4;" data-i18n="qr_modal_tip">
-        Browsing on mobile? Download QR image to gallery -> Open GPay/PhonePe -> Scan QR -> Select 'Upload from Gallery'.
-      </p>
+  <!-- Full Featured Donation Modal -->
+  <div id="donation-modal" class="modal no-print" role="dialog" aria-modal="true" aria-labelledby="donation-modal-title">
+    <div class="modal-content donation-modal-content">
+      <button id="close-donation-modal" class="modal-close" aria-label="Close dialog">&times;</button>
+      
+      <!-- Modal Header -->
+      <div class="donation-modal-header text-center">
+        <span class="modal-header-icon">🪔</span>
+        <h3 id="donation-modal-title" data-i18n="modal_donation_title">Sacred Renovation Contribution Portal</h3>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="upi">
+          <span data-i18n="tab_upi_qr">📱 UPI & QR Code</span>
+        </button>
+        <button class="modal-tab-btn" data-tab="bank">
+          <span data-i18n="tab_bank_transfer">🏛️ Direct Bank Transfer</span>
+        </button>
+      </div>
+
+      <!-- Tab 1: UPI & Live QR Code -->
+      <div id="tab-content-upi" class="tab-pane active">
+        <div class="modal-upi-layout">
+          
+          <!-- Left Column: Amount Selector & Controls -->
+          <div class="modal-upi-left">
+            <label class="selector-label" data-i18n="select_amount_label">Select Donation Amount:</label>
+            <div class="unified-amount-grid">
+              <button class="chip" data-amount="1008">₹1,008</button>
+              <button class="chip" data-amount="5000">₹5,000</button>
+              <button class="chip active" data-amount="11000">₹11,000 ⭐ <span data-i18n="plaque_tier">Stone Plaque Tier</span></button>
+              <button class="chip" data-amount="25000">₹25,000</button>
+              <button class="chip" data-amount="50000">₹50,000</button>
+              <div class="custom-amount-pill">
+                <span class="currency-symbol">₹</span>
+                <input type="text" id="custom-amount-input" placeholder="Other amount" data-i18n-placeholder="custom_amount_placeholder" inputmode="numeric" />
+              </div>
+            </div>
+
+            <div class="modal-vpa-pill">
+              <div class="vpa-info">
+                <span class="vpa-label" data-i18n="vpa_label">UPI Recipient VPA:</span>
+                <strong class="vpa-text">f051m01588@indianbk</strong>
+              </div>
+              <button id="modal-copy-vpa-btn" class="btn btn-sm btn-outline copy-btn" data-copy="f051m01588@indianbk" data-i18n="btn_copy_vpa">
+                📋 Copy UPI ID
+              </button>
+            </div>
+
+            <!-- Mobile Direct Pay Button -->
+            <div class="modal-upi-actions">
+              <a id="pay-upi-btn" href="#" class="btn-upi-pay">
+                <span data-i18n="btn_pay_upi_app">📱 Pay Directly via Any UPI App</span>
+                <span class="btn-upi-subtext">Google Pay • PhonePe • Paytm • BHIM</span>
+              </a>
+            </div>
+
+            <div class="modal-tax-note">
+              <small>🛡️ Eligible for 50% Tax Exemption under Section 80G. Donors contributing ₹11,000+ receive stone plaque inscription.</small>
+            </div>
+          </div>
+
+          <!-- Right Column: Live QR Code -->
+          <div class="modal-upi-right text-center">
+            <div class="modal-qr-card">
+              <img src="/assets/images/upi-qr.png" alt="Live UPI QR Code" class="modal-qr-image qr-modal-img" />
+              <p class="qr-scan-hint" data-i18n="scan_qr_instantly_hint">Scan this QR code with Google Pay, PhonePe, Paytm, BHIM, or any banking app on your phone</p>
+              <button id="download-qr-btn" class="btn btn-gold btn-block" data-i18n="btn_download_qr">
+                📥 Download QR Code to Gallery
+              </button>
+              <p class="qr-modal-tip" data-i18n="qr_modal_tip">
+                Browsing on mobile? Download QR image to gallery -> Open GPay/PhonePe -> Scan QR -> Select 'Upload from Gallery'.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab 2: Direct Bank Transfer Details -->
+      <div id="tab-content-bank" class="tab-pane">
+        <div class="bank-details-box modal-bank-box">
+          <h4 data-i18n="bank_details_heading">Direct Bank Transfer Details</h4>
+          <div class="bank-credential-rows">
+            <div class="bank-row">
+              <span class="bank-row-label" data-i18n="acc_name_label">Account Name:</span>
+              <strong class="bank-row-value">1008 SHRI VIRSHABANATH BHAGWAN JAIN TEMPLE TRUST, OTHALAVADI</strong>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label" data-i18n="acc_no_label">Account No:</span>
+              <div class="bank-val-with-copy">
+                <strong class="bank-row-value">8350857706</strong>
+                <button id="copy-acc-btn-modal" class="btn btn-sm btn-outline copy-btn" data-copy="8350857706" data-i18n="btn_copy">Copy</button>
+              </div>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label" data-i18n="bank_name_label">Bank Name:</span>
+              <strong class="bank-row-value">Indian Bank (Devikapuram Branch - Code 02322)</strong>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label" data-i18n="ifsc_label">IFSC Code:</span>
+              <div class="bank-val-with-copy">
+                <strong class="bank-row-value">IDIB000D074</strong>
+                <button id="copy-ifsc-btn-modal" class="btn btn-sm btn-outline copy-btn" data-copy="IDIB000D074" data-i18n="btn_copy">Copy</button>
+              </div>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label">Branch & Location:</span>
+              <span class="bank-row-value">Devikapuram Branch, Chetpet Taluk, Tiruvannamalai District, Tamil Nadu – 632326</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

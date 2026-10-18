@@ -57,7 +57,8 @@ const subSuites = [
   'scripts/verify_i18n.mjs',
   'scripts/verify_task_4.mjs',
   'scripts/verify_task_5.mjs',
-  'scripts/verify_task_6.mjs'
+  'scripts/verify_task_6.mjs',
+  'scripts/verify_donation_redesign.mjs'
 ];
 
 for (const script of subSuites) {
