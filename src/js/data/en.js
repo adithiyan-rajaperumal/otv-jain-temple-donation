@@ -103,7 +103,7 @@ export const en = {
   yathi_plans_heading_2: "Survey No. 545 Plot Layout & Site Plan",
   yathi_specs_heading: "Proposed Yathi Nivas Structure Specifications",
   land_layout_title: "Temple Site & Dedicated Donated Land Layout (Survey No. 545)",
-  land_layout_subtitle: "20 Cents (693.12 m²) dedicated by 4 village families across 3 adjacent plots registered under Trust Deed No. 14/2026",
+  land_layout_subtitle: "20 Cents (693.12 m²) dedicated by 4 village families across 3 adjacent plots registered under a separate donation deed",
   temple_north_boundary: "1008 Sri Vrishabanath Bhagwan Jain Temple (North Boundary, Facing Street)",
   temple_north_subtext: "Existing Ancient Jinalayam & Main Road Access (36.60 m street frontage)",
   plot_3_title: "Plot No. 3 (Adjacent to Temple South Wall)",
