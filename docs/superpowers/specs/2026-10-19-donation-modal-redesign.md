@@ -88,7 +88,13 @@ A full-featured, accessible, responsive modal dialog:
     - Bank Name: `Indian Bank`
     - Branch: `Devikapuram Branch (Code 02322)`
     - IFSC Code: `IDIB000D074` (with `📋 Copy` button)
-    - City / State: `Tiruvannamalai District, Tamil Nadu`
+### 3.3. Mobile Floating Action Pill (FAB)
+The existing bulky `.sticky-donate-bar` (which stretched 100% across the bottom with a 20-character email-like UPI ID and wrapped labels) is replaced with a sleek, modern **Floating Action Pill (FAB)**:
+- **Position**: Fixed at the bottom-right corner of the mobile viewport (`bottom: 20px; right: 16px; z-index: 999;`).
+- **Appearance**: Compact rounded pill (`border-radius: 30px`), vibrant gold with terracotta border and drop shadow (`box-shadow: 0 4px 16px rgba(139, 38, 19, 0.3)`).
+- **Label**: `⚡ நன்கொடை / Donate` (`data-i18n="fab_donate"`).
+- **Behavior**: Tapping it immediately launches the `#donation-modal`.
+- **Space Efficiency**: Frees up 100% of the screen width, eliminates the bulky text collision, and ensures content remains completely readable as the user scrolls.
 
 ---
 
