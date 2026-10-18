@@ -174,6 +174,10 @@ testLangs.forEach(lang => {
   assert(rendered.includes('estimate_1_temple_renovation.pdf'), `[${lang.toUpperCase()}] Package 1 PDF download link rendered`);
   assert(rendered.includes('estimate_2_muni_maharaj_guest_house.pdf'), `[${lang.toUpperCase()}] Package 2 PDF download link rendered`);
   assert(rendered.includes('estimate_3_multipurpose_hall.pdf'), `[${lang.toUpperCase()}] Package 3 PDF download link rendered`);
+  assert(rendered.includes('package-table-desktop'), `[${lang.toUpperCase()}] Desktop table rendered`);
+  assert(rendered.includes('package-cards-mobile'), `[${lang.toUpperCase()}] Mobile cards rendered`);
+  assert(rendered.includes('proposal-item-card'), `[${lang.toUpperCase()}] Proposal item cards rendered`);
+  assert(rendered.includes('package-mobile-subtotal-card'), `[${lang.toUpperCase()}] Package mobile subtotal card rendered`);
   assert(rendered.includes('proposal-grand-summary-card'), `[${lang.toUpperCase()}] Grand summary card rendered`);
 });
 
@@ -194,6 +198,10 @@ const requiredCssRules = [
   '.spec-pill',
   '.package-table-responsive',
   '.package-item-table',
+  '.package-table-desktop',
+  '.package-cards-mobile',
+  '.proposal-item-card',
+  '.package-mobile-subtotal-card',
   '.proposal-grand-summary-card',
   '.grand-summary-formula',
   '.btn-package-pdf',
@@ -207,6 +215,7 @@ requiredCssRules.forEach(rule => {
 assert(mainCss.includes('min-width: 520px'), 'main.css ensures .package-item-table has min-width: 520px for horizontal scrolling');
 assert(mainCss.includes('overflow-x: auto'), 'main.css ensures table responsive wrappers have overflow-x: auto');
 assert(printCss.includes('.package-card'), 'print.css includes .package-card styling');
+assert(printCss.includes('.package-cards-mobile'), 'print.css includes .package-cards-mobile rule');
 
 console.log(`\n========================================`);
 console.log(`TEST SUMMARY: ${passedTests}/${totalTests} Passed (${failedTests} Failed)`);

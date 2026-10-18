@@ -593,6 +593,8 @@ body {
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .cert-shield-icon {
@@ -627,8 +629,11 @@ body {
   font-size: 0.8rem;
   padding: 5px 12px;
   border-radius: 14px;
-  white-space: nowrap;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 /* Proposal Packages List */
@@ -912,6 +917,136 @@ body {
 .text-right { text-align: right; }
 .font-weight-bold { font-weight: 700; }
 
+/* Responsive Proposal Cards vs Desktop Table */
+@media (min-width: 601px) {
+  .package-cards-mobile {
+    display: none !important;
+  }
+  .package-table-desktop {
+    display: block !important;
+  }
+}
+
+/* Mobile Proposal Cards Styling */
+.package-cards-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.proposal-item-card {
+  background: #FFFFFF;
+  border: 1px solid #EFE5D8;
+  border-left: 4px solid var(--primary-terracotta);
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.card-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.item-number-badge {
+  background: var(--primary-terracotta);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-item-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-item-title {
+  margin: 0;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--primary-terracotta);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.card-item-details {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.detail-pill {
+  background: #F8F3EC;
+  border: 1px solid #EFE5D8;
+  border-radius: 6px;
+  padding: 6px 10px;
+  flex: 1;
+  min-width: 100px;
+  box-sizing: border-box;
+}
+
+.detail-pill small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.detail-pill strong {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.card-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #EFE5D8;
+  padding-top: 8px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.card-amount-badge {
+  color: var(--primary-terracotta);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.package-mobile-subtotal-card {
+  background: linear-gradient(135deg, #FFF8EC 0%, #F5ECE0 100%);
+  border: 1.5px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #2B1810;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.package-mobile-subtotal-card .package-subtotal-val {
+  color: var(--primary-terracotta);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
 /* Grand Summary Card with 3-Package Breakdown Formula */
 .proposal-grand-summary-card {
   background: linear-gradient(135deg, #FFF7EA 0%, #FFFDF9 100%);
@@ -1023,14 +1158,19 @@ body {
 /* Mobile Responsiveness for Proposals (down to 360px) */
 @media (max-width: 600px) {
   .budget-banner.proposal-grand-total-banner {
-    padding: 16px;
+    padding: 14px 12px;
     gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .banner-top-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .banner-amount-badge {
@@ -1041,12 +1181,37 @@ body {
 
   .engineer-cert-badge-box {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 10px;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .cert-details {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .cert-status-badge {
-    align-self: flex-start;
+    align-self: stretch;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+
+  .package-table-desktop {
+    display: none !important;
+  }
+
+  .package-cards-mobile {
+    display: flex !important;
   }
 
   .package-card-header {

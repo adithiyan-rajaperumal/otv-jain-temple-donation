@@ -239,8 +239,14 @@
 
   /* Tables */
   .table-responsive,
-  .package-table-responsive {
+  .package-table-responsive,
+  .package-table-desktop {
+    display: block !important;
     overflow: visible !important;
+  }
+
+  .package-cards-mobile {
+    display: none !important;
   }
 
   table,

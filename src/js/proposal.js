@@ -124,9 +124,9 @@ export function renderProposalTable() {
       `;
     }
 
-    // Itemized Breakdown Table (Responsive with overflow-x scrolling)
+    // Itemized Breakdown Table (Desktop / Tablet > 600px & Print)
     html += `
-      <div class="table-responsive package-table-responsive">
+      <div class="table-responsive package-table-responsive package-table-desktop">
         <table class="proposal-table package-item-table">
           <thead>
             <tr>
@@ -166,6 +166,45 @@ export function renderProposalTable() {
             </tr>
           </tfoot>
         </table>
+      </div>
+
+      <!-- Mobile Stacked Item Cards (<= 600px) -->
+      <div class="package-cards-mobile no-print">
+    `;
+
+    pkg.items.forEach(item => {
+      html += `
+        <div class="proposal-item-card">
+          <div class="card-item-header">
+            <span class="item-number-badge">#${item.id}</span>
+            <div class="card-item-title-wrap">
+              <h5 class="card-item-title" data-i18n="${item.descKey}">${t(item.descKey)}</h5>
+              ${item.detail ? `<div class="item-detail-note">${item.detail}</div>` : ''}
+            </div>
+          </div>
+          <div class="card-item-details">
+            <div class="detail-pill">
+              <small data-i18n="th_qty">${t('th_qty')}</small>
+              <strong>${item.qty}</strong>
+            </div>
+            <div class="detail-pill">
+              <small data-i18n="th_rate">${t('th_rate')}</small>
+              <strong>${item.rate}</strong>
+            </div>
+          </div>
+          <div class="card-item-footer">
+            <span data-i18n="th_amount">${t('th_amount')}</span>
+            <strong class="card-amount-badge">${item.formattedAmount}</strong>
+          </div>
+        </div>
+      `;
+    });
+
+    html += `
+        <div class="package-mobile-subtotal-card">
+          <span data-i18n="package_subtotal">${t('package_subtotal')}</span>
+          <strong class="package-subtotal-val">${pkg.formattedTotal}</strong>
+        </div>
       </div>
     </div>
     `;
