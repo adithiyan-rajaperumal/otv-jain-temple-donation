@@ -89,7 +89,7 @@ export const kn = {
   urn_12a_val: "AAATZ4555BE20261",
   tax_assessment_years_label: "ತೆರಿಗೆ ವಿನಾಯಿತಿ ಅವಧಿ:",
   tax_assessment_years_val: "ಆದಾಯ ವರ್ಷ 2026-27 ರಿಂದ 2028-29 ರವರೆಗೆ",
-  btn_copy_pan: "PAN ಕಾಪಿ ಮಾಡಿ",
+  btn_copy_pan: "📋 PAN ಕಾಪಿ ಮಾಡಿ",
   btn_copy_urn: "📋 URN ಕಾಪಿ ಮಾಡಿ",
   pan_copied: "✓ ಕಾಪಿ ಮಾಡಲಾಗಿದೆ!",
   btn_download_80g: "📥 80G ಆದೇಶ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)",

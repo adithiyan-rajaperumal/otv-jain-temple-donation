@@ -89,7 +89,7 @@ export const hi = {
   urn_12a_val: "AAATZ4555BE20261",
   tax_assessment_years_label: "कर छूट की वैधता अवधि:",
   tax_assessment_years_val: "कर वर्ष 2026-27 से 2028-29 तक",
-  btn_copy_pan: "PAN कॉपी करें",
+  btn_copy_pan: "📋 PAN कॉपी करें",
   btn_copy_urn: "📋 URN कॉपी करें",
   pan_copied: "✓ कॉपी किया गया!",
   btn_download_80g: "📥 80G आदेश डाउनलोड करें (PDF)",

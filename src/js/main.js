@@ -5,7 +5,7 @@ import { initGallery, openLightbox } from './gallery.js';
 
 function initCredentialCopyButtons() {
   const copyButtons = [
-    { id: 'copy-pan-btn', fallbackText: 'AAATZ4555B', labelKey: 'btn_copy_pan', fallbackLabel: 'Copy PAN' },
+    { id: 'copy-pan-btn', fallbackText: 'AAATZ4555B', labelKey: 'btn_copy_pan', fallbackLabel: '📋 Copy PAN' },
     { id: 'copy-80g-btn', fallbackText: 'AAATZ4555BF20261', labelKey: 'btn_copy_urn', fallbackLabel: '📋 Copy URN' },
     { id: 'copy-12a-btn', fallbackText: 'AAATZ4555BE20261', labelKey: 'btn_copy_urn', fallbackLabel: '📋 Copy URN' }
   ];

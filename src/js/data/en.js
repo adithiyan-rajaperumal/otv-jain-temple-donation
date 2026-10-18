@@ -89,7 +89,7 @@ export const en = {
   urn_12a_val: "AAATZ4555BE20261",
   tax_assessment_years_label: "Tax Exemption Period:",
   tax_assessment_years_val: "From TY 2026-27 to TY 2028-29",
-  btn_copy_pan: "Copy PAN",
+  btn_copy_pan: "📋 Copy PAN",
   btn_copy_urn: "📋 Copy URN",
   pan_copied: "✓ Copied!",
   btn_download_80g: "📥 Download 80G Approval (PDF)",
