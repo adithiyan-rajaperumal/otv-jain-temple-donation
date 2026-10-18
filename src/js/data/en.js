@@ -31,7 +31,7 @@ export const en = {
   // Navigation & Section Titles
   notice_title: "Sacred Appeal Notice from Shravakas & Shravikas",
   notice_subtitle: "Official Appeal from Shravakas, Shravikas & Othalavadi Villagers",
-  proposal_title: "Technical Work Estimates & Yathi Nivas Plan",
+  proposal_title: "Certified Civil Engineering Renovation Estimates",
   gallery_title: "Temple Photo Gallery",
   contact_title: "Trustee Contacts & Location",
 
@@ -102,6 +102,17 @@ export const en = {
   yathi_plans_heading_1: "Proposed Yathi Nivas 3D Elevation & Floor Plan",
   yathi_plans_heading_2: "Survey No. 545 Plot Layout & Site Plan",
   yathi_specs_heading: "Proposed Yathi Nivas Structure Specifications",
+  land_layout_title: "Temple Site & Dedicated Donated Land Layout (Survey No. 545)",
+  land_layout_subtitle: "20 Cents (693.12 m²) dedicated by 4 village families across 3 adjacent plots registered under Trust Deed No. 14/2026",
+  temple_north_boundary: "1008 Sri Vrishabanath Bhagwan Jain Temple (North Boundary, Facing Street)",
+  temple_north_subtext: "Existing Ancient Jinalayam & Main Road Access (36.60 m street frontage)",
+  plot_3_title: "Plot No. 3 (Adjacent to Temple South Wall)",
+  plot_4a_title: "Plot No. 4A (Middle Parcel)",
+  plot_4b_title: "Plot No. 4B (Southern Parcel with Street Corner)",
+  land_dim_label: "Dimensions:",
+  land_area_label: "Area:",
+  land_total_area_label: "Total Dedicated Land Area (3 + 4A + 4B):",
+  btn_enlarge_blueprint: "🔍 Tap image to view high-resolution plot survey & dimensions",
   notice_proofs_heading: "Printed Notice Color Scans & Proofs",
 
   // Arihantagiri Bhattarak Swamiji Blessing Letter

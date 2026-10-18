@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallery();
 
   // Proof Images & Architectural Plans Lightbox Viewer with keyboard accessibility
-  const proofImgs = document.querySelectorAll('.proof-thumbnails img, .plan-card img');
+  const proofImgs = document.querySelectorAll('.proof-thumbnails img, .plan-card img, .land-blueprint-wrap img, .proof-thumbnails-img');
   proofImgs.forEach(img => {
     img.setAttribute('tabindex', '0');
     img.setAttribute('role', 'button');
