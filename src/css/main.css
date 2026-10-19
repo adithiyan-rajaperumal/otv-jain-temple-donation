@@ -677,81 +677,111 @@ body {
 }
 
 .banner-amount-badge {
-  background: rgba(0, 0, 0, 0.22);
-  border: 1.5px solid rgba(212, 160, 23, 0.6);
-  border-radius: 10px;
-  padding: 10px 18px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.32) 0%, rgba(20, 5, 2, 0.45) 100%);
+  border: 1.5px solid rgba(245, 180, 26, 0.75);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 12px 20px;
   text-align: right;
   flex-shrink: 0;
+  min-width: 280px;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
 .amount-label {
   display: block;
-  font-size: 0.74rem;
-  color: #F4EBE1;
+  font-size: 0.76rem;
+  color: #F8F1E5;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .total-badge {
-  font-size: 1.45rem;
+  font-size: 1.65rem;
   color: var(--accent-gold-bright);
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.5px;
 }
 
 .amount-lakhs {
-  font-size: 1rem;
-  color: #FFF8E7;
+  font-size: 1.05rem;
+  color: #FFFDF8;
   font-weight: 600;
 }
 
 /* Banner Sub-Budget Row & Sub-Pills */
 .proposal-grand-total-banner .sub-budget-row,
 .banner-sub-budgets {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 12px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sub-budget-pill {
-  background: #FFFFFF;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
   border: 1px solid #E8DEC8;
-  border-radius: 8px;
-  padding: 8px 14px;
-  display: inline-flex;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.84rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.sub-budget-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.sub-budget-pill:first-child {
+  border-left: 4px solid var(--primary-gold);
+}
+
+.sub-budget-pill:last-child {
+  border-left: 4px solid #E67E22;
 }
 
 .sub-budget-icon {
-  font-size: 1.15rem;
+  font-size: 1.6rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .sub-budget-info {
   display: flex;
   flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
 }
 
 .sub-budget-label {
-  color: var(--text-muted);
-  font-weight: 600;
-  font-size: 0.74rem;
+  color: #6C5B4F;
+  font-weight: 700;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
+  line-height: 1.35;
 }
 
 .sub-budget-amount,
 .sub-budget-val {
   color: var(--primary-terracotta);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 /* Engineer Certification Badge Box */
@@ -1327,6 +1357,17 @@ body {
   font-weight: 700;
   color: var(--primary-gold);
   user-select: none;
+}
+
+.formula-block.formula-pradhista {
+  background: linear-gradient(180deg, #FFFDF5 0%, #FFF8EA 100%);
+  border: 1.5px solid var(--primary-gold);
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.15);
+}
+
+.formula-block.formula-pradhista .formula-val {
+  color: #B25900;
+  font-weight: 800;
 }
 
 .formula-block.formula-total {
@@ -2919,8 +2960,8 @@ body {
   .proposal-grand-total-banner .sub-budget-row,
   .banner-sub-budgets,
   .sub-budget-row {
-    flex-direction: column;
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     align-items: stretch;
   }
 }

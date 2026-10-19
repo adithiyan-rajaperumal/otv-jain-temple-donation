@@ -61,7 +61,8 @@ const subSuites = [
   'scripts/verify_pradhista_task_2.mjs',
   'scripts/verify_pradhista_task_3.mjs',
   'scripts/verify_pradhista_task_4.mjs',
-  'scripts/verify_pradhista_and_pdf_viewer.mjs'
+  'scripts/verify_pradhista_and_pdf_viewer.mjs',
+  'scripts/verify_icons_and_desktop_budget.mjs'
 ];
 
 for (const script of subSuites) {

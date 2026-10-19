@@ -109,13 +109,10 @@ export function renderProposalTable() {
               <strong class="package-amount-badge">${pkg.formattedTotal}</strong>
             </div>
             ${isCeremonial
-              ? `<div class="ceremonial-note-pill no-print">
-                   <span class="pill-icon">🪔</span>
-                   <span class="pill-text" data-i18n="${pkg.badgeKey}">${t(pkg.badgeKey)}</span>
-                 </div>`
+              ? ``
               : `<div class="doc-actions-group package-actions-group no-print">
-                   <button type="button" class="btn btn-outline btn-package-pdf btn-view-pdf" data-pdf-url="${pkg.pdf}" data-pdf-title="${t(pkg.titleKey)}" data-pdf-filename="${downloadFilename}">
-                     <span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">${t('btn_view_pdf')}</span>
+                   <button type="button" class="btn btn-outline btn-package-pdf btn-view-pdf" data-pdf-url="${pkg.pdf}" data-pdf-title="${t(pkg.titleKey)}" data-pdf-filename="${downloadFilename}" data-i18n="btn_view_pdf">
+                     ${t('btn_view_pdf')}
                    </button>
                    <a href="${pkg.pdf}" download="${downloadFilename}" class="btn btn-outline btn-package-pdf" data-i18n="btn_download_${pkg.id}">
                      ${t('btn_download_' + pkg.id)}
