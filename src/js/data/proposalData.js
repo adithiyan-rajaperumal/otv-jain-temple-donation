@@ -1,9 +1,13 @@
 export const proposalData = {
-  grandTotal: 7616000,
-  formattedGrandTotal: "₹76,16,000",
+  grandTotal: 12616000,
+  formattedGrandTotal: "₹1,26,16,000",
   // Backward compatibility aliases
-  totalEstimate: 7616000,
-  formattedTotal: "₹76,16,000",
+  totalEstimate: 12616000,
+  formattedTotal: "₹1,26,16,000",
+  civilSubtotal: 7616000,
+  formattedCivilSubtotal: "₹76,16,000",
+  pradhistaSubtotal: 5000000,
+  formattedPradhistaSubtotal: "₹50,00,000",
   engineer: {
     name: "Er. K. Sundararajan",
     regNo: "038/LS/2019/00015",
@@ -74,6 +78,44 @@ export const proposalData = {
         { id: 4, descKey: "pkg_3_item_4", detail: "2x2 Vitrified Tiles on Concrete Bed", qty: "Flooring Area", rate: "Estimate", amount: 380000, formattedAmount: "₹3,80,000" },
         { id: 5, descKey: "pkg_3_item_5", detail: "Woodwork, Emulsion Paint, Electrical & Grill Gates", qty: "Finishing & Services", rate: "Estimate", amount: 325000, formattedAmount: "₹3,25,000" }
       ]
+    },
+    {
+      id: "pkg_4",
+      titleKey: "pkg_4_title",
+      subtitleKey: "pkg_4_subtitle",
+      badgeKey: "pkg_4_badge",
+      total: 5000000,
+      formattedTotal: "₹50,00,000",
+      isCeremonialEstimate: true,
+      items: [
+        {
+          id: 1,
+          descKey: "pkg_4_item_1",
+          detail: "5 Days Continuous Annadanam & devotee arrangements",
+          qty: "5 Days",
+          rate: "Estimate",
+          amount: 3000000,
+          formattedAmount: "₹30,00,000"
+        },
+        {
+          id: 2,
+          descKey: "pkg_4_item_2",
+          detail: "Vidhan, Homam, Pooja Sacred Items & Samagri",
+          qty: "Pooja Samagri",
+          rate: "Estimate",
+          amount: 1000000,
+          formattedAmount: "₹10,00,000"
+        },
+        {
+          id: 3,
+          descKey: "pkg_4_item_3",
+          detail: "Pandhal, Stage, Lighting, Sound System, Generator Rent & General Logistics",
+          qty: "Event Setup",
+          rate: "Estimate",
+          amount: 1000000,
+          formattedAmount: "₹10,00,000"
+        }
+      ]
     }
   ],
   // Flat items array for backward compatibility with existing proposal table
@@ -85,6 +127,7 @@ export const proposalData = {
     { id: 5, descKey: "pkg_1_item_5", qty: "Pragaram", rate: "Lump Sum", amount: 896000, formattedAmount: "₹8,96,000" },
     { id: 6, descKey: "pkg_1_item_6", qty: "Front Entrance", rate: "Lump Sum", amount: 83000, formattedAmount: "₹83,000" },
     { id: 7, descKey: "pkg_2_title", qty: "Guest House", rate: "Sub-package", amount: 1861000, formattedAmount: "₹18,61,000" },
-    { id: 8, descKey: "pkg_3_title", qty: "Community Hall", rate: "Sub-package", amount: 2595000, formattedAmount: "₹25,95,000" }
+    { id: 8, descKey: "pkg_3_title", qty: "Community Hall", rate: "Sub-package", amount: 2595000, formattedAmount: "₹25,95,000" },
+    { id: 9, descKey: "pkg_4_title", qty: "Panchakalyana Pradhista", rate: "5 Days Estimate", amount: 5000000, formattedAmount: "₹50,00,000" }
   ]
 };

@@ -707,6 +707,53 @@ body {
   font-weight: 600;
 }
 
+/* Banner Sub-Budget Row & Sub-Pills */
+.proposal-grand-total-banner .sub-budget-row,
+.banner-sub-budgets {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.sub-budget-pill {
+  background: #FFFFFF;
+  border: 1px solid #E8DEC8;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sub-budget-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.sub-budget-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-budget-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.sub-budget-amount,
+.sub-budget-val {
+  color: var(--primary-terracotta);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 /* Engineer Certification Badge Box */
 .engineer-cert-badge-box {
   background: rgba(255, 255, 255, 0.1);
@@ -783,6 +830,16 @@ body {
   box-shadow: 0 6px 20px rgba(139, 38, 19, 0.1);
 }
 
+.package-card.pkg-ceremonial {
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  border-left: 5px solid var(--accent-gold-bright);
+  background: linear-gradient(180deg, #FFFDF9 0%, #FFF9F0 100%);
+}
+
+.package-card.pkg-ceremonial:hover {
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+}
+
 /* Package Card Header */
 .package-card-header {
   background: linear-gradient(to right, #FFF7EA, #FFFDF9);
@@ -826,6 +883,32 @@ body {
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 12px;
+}
+
+.badge-ceremonial-estimate {
+  background: linear-gradient(135deg, #8B2613 0%, #B84728 100%);
+  color: #FFF;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ceremonial-note-pill {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--primary-terracotta);
+  border-radius: 16px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .package-title {
@@ -1800,6 +1883,152 @@ body {
   border-radius: 8px;
 }
 
+/* ==========================================================================
+   In-Page PDF Lightbox Viewer (#pdf-modal)
+   ========================================================================== */
+#pdf-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#pdf-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-modal-content,
+.modal-content.pdf-modal-content {
+  max-width: 920px;
+  width: 95%;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #FFFDF9;
+  border: 1.5px solid var(--border-gold);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.pdf-modal-header {
+  background: #FCFAF6;
+  padding: 12px 18px;
+  border-bottom: 1px solid #EBE4DA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.pdf-modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.pdf-modal-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.pdf-modal-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-terracotta);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pdf-modal-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+#pdf-modal .modal-close,
+#close-pdf-modal {
+  position: static;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+#pdf-modal .modal-close:hover,
+#close-pdf-modal:hover {
+  color: var(--primary-terracotta);
+  transform: scale(1.1);
+}
+
+.pdf-modal-body {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  background: #323639;
+  position: relative;
+  overflow: hidden;
+}
+
+#pdf-modal-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-modal-footer {
+  background: #FCFAF6;
+  padding: 8px 14px;
+  border-top: 1px solid #EBE4DA;
+  font-size: 0.80rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+#pdf-modal-direct-link {
+  color: var(--primary-terracotta);
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 4px;
+  transition: color 0.15s ease;
+}
+
+#pdf-modal-direct-link:hover {
+  color: var(--terracotta-dark);
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -2680,6 +2909,20 @@ body {
     flex-direction: column;
     gap: 16px;
   }
+  .pdf-modal-content {
+    width: 96%;
+    height: 90vh;
+  }
+  .pdf-modal-header {
+    padding: 10px 14px;
+  }
+  .proposal-grand-total-banner .sub-budget-row,
+  .banner-sub-budgets,
+  .sub-budget-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
 }
 
 /* Official Documents Download Row */
@@ -2732,6 +2975,56 @@ body {
 
 .btn-doc-download .doc-icon {
   font-size: 1.1rem;
+}
+
+/* Dual Document Action Button Groups */
+.doc-actions-group {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.doc-action-card {
+  background: #FFFFFF;
+  border: 1px solid #EBE4DA;
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.doc-action-card.doc-actions-group {
+  justify-content: space-between;
+}
+
+.btn-doc-view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--primary-terracotta);
+  color: var(--primary-terracotta);
+  background: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 40px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.btn-doc-view:hover {
+  background: var(--primary-terracotta);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(139, 38, 19, 0.18);
+}
+
+.btn-doc-view .doc-icon {
+  font-size: 1rem;
 }
 
 /* Bhattarak Swamiji Blessing Card */
@@ -3041,6 +3334,31 @@ body {
   .donation-portal-actions .btn {
     width: 100%;
   }
+
+  /* PDF Modal & Doc Actions Responsive (<= 480px) */
+  .pdf-modal-content {
+    width: 98%;
+    height: 94vh;
+    border-radius: 10px;
+  }
+  .pdf-modal-header {
+    padding: 8px 10px;
+  }
+  .pdf-modal-title {
+    font-size: 0.88rem;
+  }
+  #pdf-modal-download-btn {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    min-height: 36px;
+  }
+  .doc-actions-group {
+    width: 100%;
+  }
+  .doc-actions-group .btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
 }
 
 @media (max-width: 360px) {
@@ -3114,6 +3432,21 @@ body {
   }
   .bank-row {
     padding: 8px 10px;
+  }
+
+  /* PDF Modal & Doc Actions Responsive (<= 360px) */
+  .pdf-modal-content {
+    height: 96vh;
+  }
+  .pdf-modal-title {
+    font-size: 0.82rem;
+  }
+  .doc-actions-group {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .doc-actions-group .btn {
+    width: 100%;
   }
 }
 

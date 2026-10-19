@@ -72,11 +72,11 @@ const langs = [
 ];
 
 const baseKeys = Object.keys(en);
-assert(baseKeys.length === 193, `Base language (EN) has exactly 193 keys (found: ${baseKeys.length})`);
+assert(baseKeys.length >= 193, `Base language (EN) has comprehensive keys (${baseKeys.length} >= 193)`);
 
 for (const lang of langs) {
   const keys = Object.keys(lang.data);
-  assert(keys.length === 193, `[${lang.code.toUpperCase()}] Has exactly 193/193 keys (found: ${keys.length})`);
+  assert(keys.length === baseKeys.length, `[${lang.code.toUpperCase()}] Key count matches base EN (${keys.length}/${baseKeys.length})`);
 
   const missing = baseKeys.filter(k => !keys.includes(k));
   assert(missing.length === 0, `[${lang.code.toUpperCase()}] 0 missing keys from base`);

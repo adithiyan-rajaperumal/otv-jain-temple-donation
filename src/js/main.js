@@ -2,13 +2,16 @@ import { setLanguage, resolveInitialLanguage, getCurrentLanguage, t } from './i1
 import { initUPI, openDonationModal, showToast, showToastAndCopy } from './upi.js';
 import { renderProposalTable, initProposalActions } from './proposal.js';
 import { initGallery, openLightbox } from './gallery.js';
+import { initPdfModal, openPdfModal, closePdfModal } from './pdfModal.js';
 
-// Expose openDonationModal on window for global / inline access
+// Expose modal open/close functions on window for global / inline access
 if (typeof window !== 'undefined') {
   window.openDonationModal = openDonationModal;
+  window.openPdfModal = openPdfModal;
+  window.closePdfModal = closePdfModal;
 }
 
-export { openDonationModal };
+export { openDonationModal, openPdfModal, closePdfModal };
 
 function initCredentialCopyButtons() {
   const copyButtons = [
@@ -56,28 +59,45 @@ function initCredentialCopyButtons() {
 }
 
 function updateBhattarakDownloadLink(lang) {
-  const btn = document.getElementById('download-bhattarak-letter-btn');
-  if (!btn) return;
   const currentLang = lang || getCurrentLanguage() || 'ta';
   const pdfPath = `/assets/docs/bhattarak_letter_${currentLang}.pdf`;
   const filename = `Bhattarak_Swamiji_Blessing_Appeal_${currentLang}.pdf`;
-  btn.setAttribute('href', pdfPath);
-  btn.setAttribute('download', filename);
+
+  const downloadBtn = document.getElementById('download-bhattarak-letter-btn');
+  if (downloadBtn) {
+    downloadBtn.setAttribute('href', pdfPath);
+    downloadBtn.setAttribute('download', filename);
+  }
+
+  const viewBtn = document.getElementById('view-bhattarak-letter-btn');
+  if (viewBtn) {
+    viewBtn.setAttribute('data-pdf-url', pdfPath);
+    viewBtn.setAttribute('data-pdf-filename', filename);
+  }
 }
 
 function updateNoticeDownloadLink(lang) {
-  const btn = document.getElementById('download-notice-pdf-btn');
-  if (!btn) return;
   const currentLang = lang || getCurrentLanguage() || 'ta';
   const pdfPath = `/assets/docs/notice_${currentLang}.pdf`;
   const filename = `Official_Notice_${currentLang}.pdf`;
-  btn.setAttribute('href', pdfPath);
-  btn.setAttribute('download', filename);
+
+  const downloadBtn = document.getElementById('download-notice-pdf-btn');
+  if (downloadBtn) {
+    downloadBtn.setAttribute('href', pdfPath);
+    downloadBtn.setAttribute('download', filename);
+  }
+
+  const viewBtn = document.getElementById('view-notice-pdf-btn');
+  if (viewBtn) {
+    viewBtn.setAttribute('data-pdf-url', pdfPath);
+    viewBtn.setAttribute('data-pdf-filename', filename);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Modules
   initUPI();
+  initPdfModal();
 
   // Determine initial language
   const initialLang = resolveInitialLanguage();
@@ -99,22 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
       setLanguage(lang);
       updateBhattarakDownloadLink(lang);
       updateNoticeDownloadLink(lang);
-      renderProposalTable(); // re-render table headers with selected language
+      renderProposalTable(); // re-render table headers & packages with selected language
     });
   });
 
   // Initialize Credential Copy Buttons
   initCredentialCopyButtons();
 
-  // Initialize Download Links
+  // Initialize Download and View Links
   updateBhattarakDownloadLink(initialLang);
   updateNoticeDownloadLink(initialLang);
 
   document.addEventListener('languageChanged', (e) => {
-    if (e.detail && e.detail.lang) {
-      updateBhattarakDownloadLink(e.detail.lang);
-      updateNoticeDownloadLink(e.detail.lang);
-    }
+    const lang = (e.detail && e.detail.lang) || getCurrentLanguage();
+    updateBhattarakDownloadLink(lang);
+    updateNoticeDownloadLink(lang);
     renderProposalTable();
   });
 
@@ -125,9 +144,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const bhattarakViewBtn = document.getElementById('view-bhattarak-letter-btn');
+  if (bhattarakViewBtn) {
+    bhattarakViewBtn.addEventListener('click', () => {
+      updateBhattarakDownloadLink(getCurrentLanguage());
+    });
+  }
+
   const noticeBtn = document.getElementById('download-notice-pdf-btn');
   if (noticeBtn) {
     noticeBtn.addEventListener('click', () => {
+      updateNoticeDownloadLink(getCurrentLanguage());
+    });
+  }
+
+  const noticeViewBtn = document.getElementById('view-notice-pdf-btn');
+  if (noticeViewBtn) {
+    noticeViewBtn.addEventListener('click', () => {
       updateNoticeDownloadLink(getCurrentLanguage());
     });
   }
@@ -154,4 +187,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-

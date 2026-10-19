@@ -31,8 +31,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="/assets/index-BIV7DxJF.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-C8DZHztm.css">
+  <script type="module" crossorigin src="/assets/index-xGKUixbA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cnrq2mAS.css">
 </head>
 <body>
 
@@ -318,21 +318,21 @@
       </div>
 
       <!-- Official Documents Download Row -->
-      <div class="trust-doc-downloads no-print">
+      <div class="trust-doc-downloads tax-docs-actions no-print">
         <h4 class="downloads-heading" data-i18n="official_certifications_heading">Official Certifications & Registered Deed</h4>
         <div class="doc-download-grid">
-          <a href="/assets/docs/form_80G_provisional_approval.pdf" download="1008_Sri_Vrishabanath_Temple_Form_80G_Approval.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer">
-            <span class="doc-icon">📄</span>
-            <span class="doc-btn-text" data-i18n="btn_download_80g">📥 Download 80G Approval (PDF)</span>
-          </a>
-          <a href="/assets/docs/form_12A_provisional_registration.pdf" download="1008_Sri_Vrishabanath_Temple_Form_12A_Registration.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer">
-            <span class="doc-icon">📄</span>
-            <span class="doc-btn-text" data-i18n="btn_download_12a">📥 Download 12A Certificate (PDF)</span>
-          </a>
-          <a href="/assets/docs/trust_registration_masked.pdf" download="1008_Sri_Vrishabanath_Temple_Trust_Deed_Masked.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer">
-            <span class="doc-icon">📄</span>
-            <span class="doc-btn-text" data-i18n="btn_download_trust_deed">📥 Download Masked Trust Deed (PDF)</span>
-          </a>
+          <div class="doc-action-card doc-actions-group">
+            <button type="button" class="btn btn-doc-view btn-view-pdf" data-pdf-url="/assets/docs/form_80G_provisional_approval.pdf" data-pdf-title="Form 80G Provisional Approval" data-pdf-filename="1008_Sri_Vrishabanath_Temple_Form_80G_Approval.pdf"><span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">👁️ View Document</span></button>
+            <a href="/assets/docs/form_80G_provisional_approval.pdf" download="1008_Sri_Vrishabanath_Temple_Form_80G_Approval.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer"><span class="doc-icon">📥</span> <span class="doc-btn-text" data-i18n="btn_download_80g">📥 Download 80G Approval (PDF)</span></a>
+          </div>
+          <div class="doc-action-card doc-actions-group">
+            <button type="button" class="btn btn-doc-view btn-view-pdf" data-pdf-url="/assets/docs/form_12A_provisional_registration.pdf" data-pdf-title="Form 12A Provisional Registration" data-pdf-filename="1008_Sri_Vrishabanath_Temple_Form_12A_Registration.pdf"><span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">👁️ View Document</span></button>
+            <a href="/assets/docs/form_12A_provisional_registration.pdf" download="1008_Sri_Vrishabanath_Temple_Form_12A_Registration.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer"><span class="doc-icon">📥</span> <span class="doc-btn-text" data-i18n="btn_download_12a">📥 Download 12A Certificate (PDF)</span></a>
+          </div>
+          <div class="doc-action-card doc-actions-group">
+            <button type="button" class="btn btn-doc-view btn-view-pdf" data-pdf-url="/assets/docs/trust_registration_masked.pdf" data-pdf-title="Registered Trust Deed (Masked)" data-pdf-filename="1008_Sri_Vrishabanath_Temple_Trust_Deed_Masked.pdf"><span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">👁️ View Document</span></button>
+            <a href="/assets/docs/trust_registration_masked.pdf" download="1008_Sri_Vrishabanath_Temple_Trust_Deed_Masked.pdf" class="btn btn-doc-download" target="_blank" rel="noopener noreferrer"><span class="doc-icon">📥</span> <span class="doc-btn-text" data-i18n="btn_download_trust_deed">📥 Download Masked Trust Deed (PDF)</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -358,8 +358,9 @@
         </div>
       </div>
 
-      <div class="blessing-actions no-print text-center">
-        <a id="download-bhattarak-letter-btn" href="/assets/docs/bhattarak_letter_ta.pdf" download="Bhattarak_Swamiji_Blessing_Appeal_ta.pdf" class="btn btn-gold btn-block" target="_blank" rel="noopener noreferrer">
+      <div class="blessing-actions doc-actions-group no-print text-center">
+        <button id="view-bhattarak-letter-btn" type="button" class="btn btn-outline btn-view-pdf" data-pdf-url="/assets/docs/bhattarak_letter_ta.pdf" data-pdf-title="Bhattarak Swamiji Blessing Appeal"><span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">👁️ View Document</span></button>
+        <a id="download-bhattarak-letter-btn" href="/assets/docs/bhattarak_letter_ta.pdf" download="Bhattarak_Swamiji_Blessing_Appeal_ta.pdf" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
           <span class="doc-icon">📄</span>
           <span data-i18n="btn_download_bhattarak_letter">📥 Download Blessing Letter (PDF)</span>
         </a>
@@ -368,23 +369,13 @@
     </section>
 
     <!-- Notice Section -->
-    <section class="card notice-card">
+    <section id="notice-section" class="card notice-card">
       <h3 class="section-title" data-i18n="notice_title">Official Renovation Notice</h3>
       <div id="notice-text-content" class="notice-content"></div>
       
-      <div class="notice-actions no-print" style="margin-bottom: 20px;">
+      <div class="notice-actions doc-actions-group no-print" style="margin-bottom: 20px;">
+        <button id="view-notice-pdf-btn" type="button" class="btn btn-gold btn-sm btn-view-pdf" data-pdf-url="/assets/docs/notice_ta.pdf" data-pdf-title="Official Renovation Notice"><span class="doc-icon">👁️</span> <span data-i18n="btn_view_pdf">👁️ View Document</span></button>
         <a id="download-notice-pdf-btn" href="/assets/docs/notice_ta.pdf" download class="btn btn-outline btn-sm" data-i18n="btn_download_notice_pdf">📄 Download Official Notice PDF</a>
-      </div>
-      
-      <!-- Proof Images -->
-      <div class="notice-proofs no-print">
-        <h4 style="color:var(--primary-terracotta);" data-i18n="notice_proofs_heading">Printed Notice Color Scans & Proofs</h4>
-        <div class="proof-thumbnails">
-          <img src="/assets/images/notices/english_notice_color.jpg" alt="English Notice Color" title="Click to view full notice" />
-          <img src="/assets/images/notices/tamil_notice_colour.jpg" alt="Tamil Notice Color" title="Click to view full notice" />
-          <img src="/assets/images/notices/hindhi_notice_color.jpg" alt="Hindi Notice Color" title="Click to view full notice" />
-          <img src="/assets/images/notices/kannada_notice_color.jpg" alt="Kannada Notice Color" title="Click to view full notice" />
-        </div>
       </div>
     </section>
 
@@ -402,9 +393,6 @@
         <a href="/assets/docs/estimate_3_multipurpose_hall.pdf" download="Estimate_3_Multipurpose_Hall.pdf" class="btn btn-outline" data-i18n="btn_download_pkg_3">
           📥 Download Package 3 Estimate (PDF)
         </a>
-        <button id="print-proof-btn" class="btn btn-gold" data-i18n="btn_print_proof">
-          🖨️ Print / Save Clean PDF Proof
-        </button>
       </div>
 
       <div id="proposal-table-container">
@@ -628,6 +616,35 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- In-Page PDF Lightbox Modal -->
+  <div id="pdf-modal" class="modal no-print" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+    <div class="modal-content pdf-modal-content">
+      <div class="pdf-modal-header">
+        <div class="pdf-modal-title-wrap">
+          <span class="pdf-modal-icon">📄</span>
+          <h3 id="pdf-modal-title" class="pdf-modal-title">Official Document</h3>
+        </div>
+        <div class="pdf-modal-controls">
+          <a id="pdf-modal-download-btn" href="#" download class="btn btn-gold btn-sm">
+            <span class="btn-icon">📥</span> <span data-i18n="btn_download">Download PDF</span>
+          </a>
+          <button id="close-pdf-modal" class="modal-close" aria-label="Close document viewer">&times;</button>
+        </div>
+      </div>
+      <div class="pdf-modal-body">
+        <iframe id="pdf-modal-frame" src="about:blank" title="PDF Document Viewer" frameborder="0"></iframe>
+      </div>
+      <div class="pdf-modal-footer text-center">
+        <small>
+          <span data-i18n="pdf_modal_fallback_text">Having trouble viewing?</span>
+          <a id="pdf-modal-direct-link" href="#" target="_blank" rel="noopener noreferrer">
+            🔗 Open in new tab
+          </a>
+        </small>
+      </div>
     </div>
   </div>
 
